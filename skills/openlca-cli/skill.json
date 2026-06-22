@@ -1,0 +1,9 @@
+{
+  "name": "openlca-cli",
+  "summary": "Use the openlca-cli terminal tool to inspect openLCA databases, search for flows/processes/methods, and run LCIA calculations from the command line without writing Python.",
+  "packages": ["openlca-cli"],
+  "preferred_phases": ["goal_scope_definition", "life_cycle_inventory", "life_cycle_impact_assessment"],
+  "toolchain": ["openlca CLI", "openLCA IPC server"],
+  "when_to_use": "Preferred when validating database contents, exploring available methods and systems interactively, or when the task requires shell-level access rather than Python scripting.",
+  "instructions_file": "SKILL.md"
+}

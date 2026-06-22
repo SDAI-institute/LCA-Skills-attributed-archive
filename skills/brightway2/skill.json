@@ -1,0 +1,9 @@
+{
+  "name": "brightway2",
+  "summary": "Use Brightway2 for matrix-based LCA modeling, custom foreground systems, scenario sweeps, and reproducible notebook or script workflows.",
+  "packages": ["brightway2", "bw2data", "bw2calc", "bw2io"],
+  "preferred_phases": ["life_cycle_inventory", "life_cycle_impact_assessment", "interpretation"],
+  "toolchain": ["Brightway2 project setup", "biosphere/database imports", "bw2calc LCA"],
+  "when_to_use": "Preferred when the analyst needs custom foreground modeling, reproducible scripts, or scenario/sensitivity analysis outside openLCA.",
+  "instructions_file": "SKILL.md"
+}

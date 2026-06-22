@@ -1,0 +1,9 @@
+{
+  "name": "openlca-ipc",
+  "summary": "Use the local openlca-ipc package to search databases, create product systems, calculate impacts, and extract contribution results through the openLCA IPC server.",
+  "packages": ["openlca-ipc", "olca-ipc", "olca-schema"],
+  "preferred_phases": ["goal_scope_definition", "life_cycle_inventory", "life_cycle_impact_assessment", "interpretation"],
+  "toolchain": ["openLCA desktop", "IPC server", "openlca_ipc.OLCAClient"],
+  "when_to_use": "Preferred when the study should be executed or interrogated against an openLCA database from Python.",
+  "instructions_file": "SKILL.md"
+}

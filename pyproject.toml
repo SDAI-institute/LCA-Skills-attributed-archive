@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lca-skills"
+version = "0.1.0"
+description = "Skill library for lca_multiagent — ISO 14040/44 aligned LCA agent orchestration"
+authors = [{name = "Ernest Boakye Danquah", email = "dernestbanksch@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["lca", "life-cycle-assessment", "ai-agents", "mcp", "openlca", "brightway"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Repository = "https://github.com/dernestbank/lca-skills"
+
+[tool.setuptools.package-data]
+"*" = ["skills/**/*.json", "skills/**/*.md"]

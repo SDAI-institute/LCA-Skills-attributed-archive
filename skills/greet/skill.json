@@ -1,0 +1,9 @@
+{
+  "name": "greet",
+  "summary": "Use GREET-aligned workflows for transport, fuel pathways, and energy-system assumptions when the LCA scope includes fuels, vehicles, electricity mixes, or logistics impacts.",
+  "packages": ["greet", "GREET", "transport-energy models"],
+  "preferred_phases": ["goal_scope_definition", "life_cycle_inventory", "life_cycle_impact_assessment", "interpretation"],
+  "toolchain": ["Argonne GREET datasets", "fuel pathway assumptions", "transport energy intensity benchmarking"],
+  "when_to_use": "Preferred when transport, fuel-cycle, or energy pathway assumptions materially affect the LCA result.",
+  "instructions_file": "SKILL.md"
+}

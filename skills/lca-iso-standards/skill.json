@@ -1,0 +1,9 @@
+{
+  "name": "lca-iso-standards",
+  "summary": "Apply ISO 14040/14044 procedural requirements and terminology across all four LCA phases: goal and scope definition, life cycle inventory, life cycle impact assessment, and interpretation.",
+  "packages": [],
+  "preferred_phases": ["goal_scope_definition", "life_cycle_inventory", "life_cycle_impact_assessment", "interpretation"],
+  "toolchain": ["ISO 14040:2006", "ISO 14044:2006", "ISO 14067", "ISO 14064"],
+  "when_to_use": "Always active as a cross-cutting standard. Use explicitly when checking study design for standard compliance, writing commissioner-facing documentation, or when third-party review is anticipated.",
+  "instructions_file": "SKILL.md"
+}

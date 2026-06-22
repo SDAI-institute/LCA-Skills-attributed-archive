@@ -1,0 +1,9 @@
+{
+  "name": "openlca-mcp",
+  "summary": "Use the openlca-mcp MCP server to expose openLCA IPC tools to AI assistants via the Model Context Protocol, enabling natural-language LCA workflows in Claude, Cursor, VS Code Copilot, and similar clients.",
+  "packages": ["openlca-mcp"],
+  "preferred_phases": ["goal_scope_definition", "life_cycle_inventory", "life_cycle_impact_assessment", "interpretation"],
+  "toolchain": ["MCP server", "openLCA IPC server", "Claude Desktop / Cursor / VS Code Copilot"],
+  "when_to_use": "Preferred when the study is being driven interactively through an AI assistant client that supports MCP tool calls.",
+  "instructions_file": "SKILL.md"
+}

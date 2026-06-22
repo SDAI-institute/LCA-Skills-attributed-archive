@@ -1,0 +1,9 @@
+{
+  "name": "lca-reporting",
+  "summary": "Structure and draft LCA study reports that communicate goal, scope, inventory, LCIA results, and interpretation findings clearly for technical and non-technical audiences.",
+  "packages": [],
+  "preferred_phases": ["interpretation"],
+  "toolchain": ["ISO 14044 reporting requirements", "EPD templates", "critical review checklists"],
+  "when_to_use": "Use in the interpretation phase when synthesizing results into written outputs: study summaries, EPDs, internal decision-support briefs, or commissioner-facing reports.",
+  "instructions_file": "SKILL.md"
+}

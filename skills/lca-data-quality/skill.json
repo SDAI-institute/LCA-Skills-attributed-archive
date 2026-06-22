@@ -1,0 +1,9 @@
+{
+  "name": "lca-data-quality",
+  "summary": "Assess and document data quality for LCI datasets using established schemes (ecoinvent DQR, ISO 14044 Annex A, pedigree matrix) and communicate uncertainty sources clearly.",
+  "packages": [],
+  "preferred_phases": ["life_cycle_inventory", "interpretation"],
+  "toolchain": ["ecoinvent DQR", "pedigree matrix", "ISO 14044 Annex A", "data gap identification"],
+  "when_to_use": "Use when characterizing inventory data quality, identifying data gaps, selecting background databases, or flagging high-uncertainty exchanges that may dominate results.",
+  "instructions_file": "SKILL.md"
+}
