@@ -9,3 +9,17 @@ Thumbs.db
 .pytest_cache/
 .ruff_cache/
 .coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+lca/studies/*/results/raw/
+lca/studies/*/data/private/
+*.zolca
+*.spold
+*.spold2
+*.xlsm
+*.sqlite
+*.db
+examples/*/data/private/
+examples/*/results/raw/

@@ -1,2 +1,6 @@
 {
   "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "lca-skills",
+  "version": "0.2.0",
+  "description": "Expert life cycle assessment workflows, tools, industrial modeling, review, and reproducibility skills."
+}
