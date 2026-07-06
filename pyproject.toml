@@ -9,3 +9,20 @@ dependencies = []
 
 [project.optional-dependencies]
 openlca = ["olca-ipc", "olca-schema"]
+brightway = ["bw2data", "bw2calc", "bw2io"]
+mcp-sdk = ["mcp"]
+dev = ["ruff"]
+
+[project.scripts]
+lca-skills = "lca_tools.cli:main"
+
+[tool.setuptools]
+packages = ["lca_tools"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
