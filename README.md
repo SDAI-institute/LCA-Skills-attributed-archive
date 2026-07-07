@@ -111,3 +111,213 @@ Adapter code being present does **not** prove that a target host can access your
 | `lca-report` | Decision-grade reporting, claim matrix, limitations, release manifest |
 | `lca-research` | Defensible evidence discovery, extraction, currency, and source management |
 
+### Tools and domains
+
+| Skill | Purpose |
+|---|---|
+| `lca-openlca` | openLCA GUI, IPC, calculation, Monte Carlo, imports/exports, diagnostics |
+| `lca-brightway` | Programmatic Brightway projects, matrices, calculations, scenarios, uncertainty |
+| `lca-greet` | Exact GREET product/release/pathway provenance and result reconciliation |
+| `lca-prospective` | Consequential, prospective, dynamic, temporal, spatial, and future-background studies |
+| `lca-epd-pcf` | PCF, EPD, PCR/PEFCR, PEF-style, verification and program-rule workflows |
+| `lca-sector` | Sector-specific process knowledge and modeling traps |
+| `lca-organization-social` | Organizational LCA, OEF/Scope 3 bridges, and social-LCA routing |
+
+## Invocation by host
+
+| Host/package | Typical invocation | Capability level in this repository |
+|---|---|---|
+| Claude Code plugin | `/lca-skills:lca-expert` | Namespaced skills, 9 agents, hook, MCP registration |
+| Standalone Claude Code skills | `/lca-expert` | Unnamespaced skills and copied read-only agents |
+| Claude.ai upload | Automatic; ask to use “LCA Expert” when testing | Single portable upload skill |
+| ChatGPT upload | Automatic; ask to use “LCA Expert” when testing | Single portable upload skill |
+| Codex | Commonly `$lca-expert`; confirm installed-host syntax | Portable skills plus Codex manifest |
+| Generic Agent Skills host | Host-specific | Canonical `skills/` tree |
+
+Host behavior changes over time. Use the platform-specific guide and record a real import/invocation test rather than treating file structure as proof of host support.
+
+## Repository and release packages
+
+Build all targets with:
+
+```bash
+python scripts/build_distributions.py --clean
+python scripts/build_source_release.py
+python scripts/validate_distributions.py
+```
+
+The six host ZIPs are placed in `dist/packages/`:
+
+```text
+LCA-Skills-ClaudeCode-v0.2.0.zip
+LCA-Skills-ClaudeStandalone-v0.2.0.zip
+LCA-Skills-ClaudeAI-v0.2.0.zip
+LCA-Skills-ChatGPT-v0.2.0.zip
+LCA-Skills-Codex-v0.2.0.zip
+LCA-Skills-Portable-v0.2.0.zip
+```
+
+The deterministic full repository archive is placed at `dist/source/LCA-skills-v0.2.0.zip`. Host packages contain `bundle-manifest.json`; the source archive contains `SOURCE-RELEASE.json` and companion SHA-256 files. ZIP timestamps are normalized so repeated builds from the same source are byte-deterministic.
+
+## Installation
+
+### Validate the source repository
+
+```bash
+python scripts/validate_repo.py --strict
+python -m unittest discover -s tests -p "test_*.py" -v
+python scripts/build_distributions.py --clean
+python scripts/build_source_release.py
+python scripts/validate_distributions.py
+python scripts/host_qualification.py --output host-qualification.json
+```
+
+### Claude Code plugin
+
+Extract `LCA-Skills-ClaudeCode-v0.2.0.zip`, then run:
+
+```bash
+claude --plugin-dir /path/to/lca-skills
+```
+
+Inside Claude Code, test:
+
+```text
+/lca-skills:lca-doctor
+/lca-skills:lca-expert Frame a cradle-to-gate LCA for this process.
+```
+
+`lca-autopilot` is deliberately marked explicit-only in the Claude Code build.
+
+### Standalone Claude Code
+
+Extract the standalone package and run `install.ps1` on Windows or `install.sh` on macOS/Linux. It copies skills to `~/.claude/skills` and agents to `~/.claude/agents`, writes an installation receipt, and includes matching uninstall scripts. It intentionally does not modify global hooks or MCP settings.
+
+### Claude.ai
+
+Upload `LCA-Skills-ClaudeAI-v0.2.0.zip` through **Customize → Skills → Create skill → Upload a skill**, then enable it. The ZIP has exactly one top-level `lca-expert/` directory whose name matches the `name` field.
+
+### ChatGPT
+
+Upload `LCA-Skills-ChatGPT-v0.2.0.zip` from the Skills interface. ChatGPT scans uploaded skills before making them available. Plan, workspace, role, and product-surface settings can affect availability.
+
+### Codex
+
+Use the Codex package with the installed Codex plugin/skill workflow. The current environment used to build this release did not contain a Codex executable, so the package is structurally qualified but still requires a real import and invocation transcript.
+
+See `docs/installation.md` and `docs/platforms/` for exact platform checklists.
+
+## Durable study workspace
+
+`lca-setup` creates a workspace that does not depend on chat memory:
+
+```text
+study.yaml
+intake-brief.md
+study-plan.md
+goal-and-scope.md
+process-map.md
+model-ledger.csv
+data-register.csv
+data-request.csv
+parameters.csv
+assumptions.csv
+scenario-register.csv
+balances.csv
+claims-register.csv
+decision-log.md
+qa-checklist.md
+work-receipt.json
+handoff.md
+handoff.json
+tool-runs/calculation-request.yaml
+tool-runs/*-run-manifest.yaml
+review/review-plan.md
+review/review-findings.csv
+review/review-response-log.csv
+results/processed/*.csv
+results/validation/validation-report.json
+results/release/release-manifest.json
+report/report-outline.md
+```
+
+The state machine is:
+
+```text
+DRAFT_SCOPE → SCOPE_FROZEN → INVENTORY_READY → CALCULATED
+            → INTERPRETED → REVIEWED → RELEASED
+```
+
+Material findings can reopen an earlier gate. `handoff.json`, plan revision, run manifests, and hashes are checked for drift before a resumed study relies on old results.
+
+## MCP and CLI
+
+Install the local runtime from the repository when desired:
+
+```bash
+python -m pip install -e .
+lca-skills doctor --text
+lca-skills study new demo-study --title "Demo study"
+lca-skills study validate ./lca/studies/demo-study
+```
+
+The Claude Code plugin registers `lca_tools/mcp_server.py` as a local stdio MCP server. Its 13 tools are conservative: study creation is non-destructive, QA and calculation adapters are read-oriented, and optional endpoint checks are opt-in.
+
+## Quality and qualification
+
+The release distinguishes four evidence levels:
+
+1. **Structural** — file shape, frontmatter, references, manifests, hashes, ZIP integrity.
+2. **Runtime** — a representative command worked in the current environment.
+3. **Host** — the package was actually imported and invoked in ChatGPT, Claude.ai, Claude Code, or Codex.
+4. **Scientific** — a named tool/database/method known case was reconciled and reviewed by a competent practitioner.
+
+The included synthetic matrix fixture validates software scaling and matrix semantics only. It is explicitly **not** an LCIA method or scientific benchmark.
+
+Before a production tool claim, follow `docs/tool-integration-test-plan.md`. Before a public comparison, EPD, regulatory use, assurance claim, or high-consequence decision, obtain the independent review or verification required by the governing program and competent professional judgment.
+
+## Non-negotiable rules
+
+1. The decision and audience define the model; an available database does not define the study.
+2. A functional unit quantifies service and performance, not merely product mass.
+3. Every material conclusion must trace to evidence, a parameter, an assumption, a model version, or documented expert judgment.
+4. Unit, sign, provider-link, identity, coverage, and relevant conservation checks precede interpretation.
+5. Tool success does not prove model completeness or scientific validity.
+6. Uncertainty and methodological choices limit conclusions; differences smaller than plausible uncertainty are not decisive.
+7. The plugin never claims that its own output is “ISO certified,” independently verified, or an assurance opinion.
+8. Autonomous execution stops before unauthorized publication, certification, submission, purchase, transmission, or destructive external action.
+9. Licensed data and copyrighted standards are referenced lawfully and never redistributed.
+10. Missing tools, data, rules, or evidence are reported as blockers—not replaced with fabricated runs or plausible numbers.
+
+## Repository map
+
+```text
+skills/                 portable canonical skills
+agents/                 Claude Code specialist reviewers
+hooks/                  Claude Code validation hook
+platforms/              host overlays and packaging rules
+lca_tools/              CLI, MCP server, and tool adapters
+assets/templates/       durable study templates
+scripts/                validation, build, qualification, and QA utilities
+docs/research/          deep-research foundation
+docs/platforms/         host-specific installation and qualification guides
+tests/evals/            adversarial senior-practitioner cases
+examples/                synthetic, non-scientific regression study
+knowledge/solutions/    validated reusable lessons
+```
+
+## Current qualification status
+
+The source repository, all six distributions, MCP handshake/tool catalog, study utilities, deterministic ZIPs, and synthetic regression fixture are locally tested. In the build environment used for this release:
+
+- Claude Code and Codex executables were **not installed**;
+- ChatGPT and Claude.ai uploads were **not performed** because those require the user’s eligible account and UI;
+- openLCA, Brightway, and a local GREET model were **not installed or scientifically reconciled**.
+
+Run `scripts/host_qualification.py` in the target environment to replace those statuses with evidence. Do not convert `NOT TESTED` into `PASS` without a representative recorded test.
+
+## Legal and methodological notice
+
+This software assists expert work; it does not replace competent professional judgment, independent critical review, verification, assurance, program-operator approval, or legal advice. Users remain responsible for lawful standards and dataset access, licenses, confidentiality, method selection, model validity, and the exact claims they release.
+
+Original repository content is licensed under MIT. Third-party standards, software, datasets, methods, and trademarks remain subject to their own terms.
