@@ -1,0 +1,9 @@
+{
+  "name": "swolfpy",
+  "summary": "Use SwolfPy for municipal solid waste (MSW) system LCA, Monte Carlo uncertainty, and optimization workflows.",
+  "packages": ["swolfpy", "swolfpy_inputdata", "swolfpy_processmodels", "brightway2", "bw2calc"],
+  "preferred_phases": ["goal_and_scope", "life_cycle_inventory", "life_cycle_impact_assessment", "interpretation"],
+  "toolchain": ["SwolfPy project setup", "waste-fraction parameters", "LCA_matrix", "Monte Carlo", "optimization"],
+  "when_to_use": "Preferred when modeling MSW collection/treatment systems (landfill, WTE, composting, AD, MRF) with routing optimization and uncertainty analysis.",
+  "instructions_file": "SKILL.md"
+}
