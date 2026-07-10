@@ -19,3 +19,35 @@ Create a workspace that makes the model auditable and resumable. Read `reference
 ```bash
 python scripts/new_study.py <slug> --title "<study title>"
 ```
+
+3. Confirm that `lca/studies/<slug>/` contains:
+   - `study.yaml` — machine-readable study identity and status;
+   - `goal-and-scope.md` — study protocol;
+   - `process-map.md` — foreground/background and life-cycle stages;
+   - `model-ledger.csv` — processes, products, providers, versions, and status;
+   - `data-register.csv` — values, sources, quality, and uncertainty;
+   - `parameters.csv` — names, values, units, formulas, distributions, scenarios;
+   - `assumptions.csv` — provisional choices and validation plan;
+   - `decision-log.md` — material methodological decisions;
+   - `qa-checklist.md` — quality-gate evidence;
+   - `results/` — raw, processed, figures, and release outputs;
+   - `report/` — report drafts and review responses.
+4. Run:
+
+```bash
+python scripts/validate_study.py lca/studies/<slug>
+```
+
+5. Record software, database, LCIA method, and source versions before modeling.
+
+## Existing study repair
+
+Do not overwrite populated files. Create missing artifacts, map existing files into the contract, and log migrations in `decision-log.md`.
+
+## Confidentiality
+
+Store confidential raw data outside version control or under a separately controlled location. Commit only redacted or aggregated values that the user is authorized to share.
+
+## Handoff
+
+Invoke `lca-scope` with the workspace path. Setup is complete only when the study has an owner, intended use, audience, status label, and next gate.
