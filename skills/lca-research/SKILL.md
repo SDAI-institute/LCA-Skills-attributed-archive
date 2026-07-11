@@ -17,3 +17,32 @@ Research for LCA must be traceable from question to model parameter or decision.
    - methodology/requirement;
    - process parameter or inventory;
    - emission/resource factor;
+   - database/tool behavior;
+   - benchmark or validation range.
+2. Read `references/evidence-hierarchy.md` and prioritize current primary sources.
+3. Search with exact technology, geography, year, operating basis, unit, system boundary, and source type.
+4. Use `references/source-evaluation.md` to assess relevance, authority, transparency, representativeness, uncertainty, and license.
+5. Extract data into the study register using `references/data-extraction.md`.
+6. Triangulate material parameters with at least two independent sources where feasible.
+7. Record disagreements; do not average incompatible values without a model.
+8. Translate evidence into baseline, low/high or distribution, and sensitivity treatment.
+9. Update `docs/source-register.md` only for reusable plugin-wide sources; keep study-specific sources in the study data register.
+
+## Current-source rule
+
+For standards status, regulatory/PCR rules, database releases, software APIs, characterization methods, and official models, verify the current source at the time of use. Include access date and version.
+
+## Evidence labels
+
+- `AUTHORITATIVE_REQUIREMENT`
+- `PRIMARY_TECHNICAL_DATA`
+- `PEER_REVIEWED_MODEL`
+- `OFFICIAL_DATABASE`
+- `INDUSTRY_PRIMARY_DATA`
+- `SECONDARY_REVIEW`
+- `PROXY`
+- `EXPERT_JUDGMENT`
+
+## Deliverable
+
+Produce a research memo with question, search scope, accepted/rejected sources, extracted values and units, conversion/calculation steps, uncertainty, license constraints, and model implications. Never cite a source for a claim it does not support.
