@@ -24,3 +24,42 @@ Build the foreground model from physical causality and operating reality before 
 9. Implement multifunctionality and recycling exactly as frozen in goal and scope.
 10. Add parameter uncertainty and scenario cases using `references/uncertainty-parameters.md` without double-counting variability.
 11. Run `references/inventory-audit.md` and root validation scripts where data formats permit.
+
+## Source classes
+
+Label every value as one of:
+
+- `MEASURED` — facility or supplier measurement;
+- `CALCULATED` — equation or balance with inputs;
+- `MODELED` — process simulation or engineering model;
+- `DATABASE` — named dataset and version;
+- `LITERATURE` — identifiable source and context;
+- `PROXY` — analogous process/data;
+- `EXPERT_JUDGMENT` — documented rationale;
+- `SCENARIO` — deliberately varied assumption.
+
+A value without a source class and unit is incomplete.
+
+## Inventory traps
+
+Investigate immediately:
+
+- output mass materially exceeds inputs without atmospheric/resource inputs;
+- carbon leaves nowhere or enters twice;
+- reference product sign or amount is wrong;
+- waste treatment is modeled both as an input service and a credited co-product;
+- recycled content and end-of-life credit are combined inconsistently;
+- steam, heat, electricity, or fuels are mixed on higher/lower heating value bases;
+- wet/dry basis, concentration, density, or standard/actual volume is ambiguous;
+- capture efficiency is applied without accounting for energy, solvent, compression, leakage, or fate;
+- annual infrastructure is divided by production without capacity factor and lifetime consistency;
+- market and production datasets are linked interchangeably without understanding the difference;
+- negative technosphere exchanges create an unintended substitution credit.
+
+## Quality gate G2
+
+Do not proceed to LCIA until all material exchanges pass unit, sign, provider, reference-product, completeness, and balance checks. Record closure residuals and any justified open balance.
+
+## Deliverable
+
+Update `process-map.md`, `model-ledger.csv`, `data-register.csv`, `parameters.csv`, `assumptions.csv`, and `qa-checklist.md`. Provide a model-ready inventory table and a list of unresolved high-materiality data gaps.
