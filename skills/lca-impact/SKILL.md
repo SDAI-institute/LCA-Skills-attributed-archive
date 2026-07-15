@@ -20,3 +20,38 @@ Select based on:
 - goal, audience, geography, and program/PCR requirements;
 - midpoint vs endpoint decision needs;
 - impact categories material to the product system;
+- characterization model currency and implementation version;
+- elementary-flow and compartment compatibility;
+- regionalization and time-horizon needs;
+- consistency with prior studies when comparability is legitimate.
+
+Do not default to climate change alone unless the goal is explicitly a carbon footprint. Screen for burden shifting.
+
+## Setup protocol
+
+1. Record method family, software implementation, version/date, categories, units, perspectives/time horizons, and source.
+2. Freeze the inventory and elementary-flow mapping version.
+3. Quantify mapped and unmapped inventory mass or contribution where possible.
+4. Review special topics using:
+   - `references/climate-and-carbon.md`;
+   - `references/water-land-toxicity.md`;
+   - `references/normalization-weighting.md`.
+5. Calculate a known benchmark or hand-check at least one characterization factor.
+6. For comparisons, use the same method implementation and category set unless a documented conversion is defensible.
+
+## Method cautions
+
+- Do not mix IPCC assessment-report GWPs without disclosure.
+- Biogenic carbon neutrality is not an automatic zero; track uptake, release, storage, land-use change, timing, and method rules.
+- Toxicity results often have high model and substance uncertainty; avoid risk-assessment language.
+- Water inventory volume is not water-scarcity impact; location and consumption matter.
+- Normalization and weighting introduce reference choices and value judgments. Report characterized results alongside any aggregate score.
+- Negative characterization results and missing factors require source-level investigation.
+
+## Quality gate G3
+
+Pass only when method/version, mapping coverage, units, exclusions, special carbon/water/toxicity choices, regionalization, and normalization/weighting status are documented.
+
+## Deliverable
+
+Write an LCIA method memo, update the study protocol and model ledger, and provide a machine-readable method manifest where supported by the chosen tool.
