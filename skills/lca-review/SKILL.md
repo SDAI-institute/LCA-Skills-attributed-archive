@@ -22,3 +22,40 @@ Read `references/review-orchestration.md`, `references/finding-schema.md`, `refe
 
 Select the smallest set that covers the material risks, using:
 
+- `references/persona-methodologist.md`
+- `references/persona-process-engineer.md`
+- `references/persona-data-auditor.md`
+- `references/persona-lcia-specialist.md`
+- `references/persona-uncertainty-specialist.md`
+- `references/persona-critical-reviewer.md`
+- `references/persona-claims-reviewer.md`
+- `references/persona-tool-integration.md`
+- `references/persona-sector-specialist.md`
+
+When the host supports subagents, dispatch bounded read-only reviewers in parallel and require structured JSON. Otherwise perform isolated sequential passes. Merge and deduplicate by root cause and evidence. Do not let one reviewer edit the model it is evaluating.
+
+## Mandatory checks
+
+- functional unit/reference flow and alternative equivalence;
+- complete and symmetric boundaries;
+- provider links, system model, units, signs, reference products, formulas, parameters;
+- mass/energy/carbon or elemental closure and process realism;
+- allocation, substitution, recycling, direct emissions, and duplicate credits;
+- data provenance, fit, licenses, transformations, uncertainty;
+- LCIA method/version, factors, units, mapping, regionalization, exclusions;
+- scenario, uncertainty, sensitivity, and result/contribution reconciliation;
+- report-model agreement, claims, limitations, review status, reproducibility.
+
+## Finding and release rules
+
+Classify findings `CRITICAL`, `MAJOR`, `MINOR`, `OBSERVATION`, or `QUESTION`. Track evidence, owner, response, verification, and closure.
+
+Issue one recommendation:
+
+- `NOT READY`
+- `CONDITIONALLY READY`
+- `INTERNALLY REVIEW-READY`
+- `EXTERNAL REVIEW REQUIRED`
+- `REVIEW CLOSED` with reviewer, scope, date, and limitations
+
+Create the review report, findings register, response log, and release recommendation. Preserve the finding trail when corrections are made.
