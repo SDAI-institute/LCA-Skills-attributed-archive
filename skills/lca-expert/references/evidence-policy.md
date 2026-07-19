@@ -16,3 +16,32 @@ Never present an assumption or scenario as observed fact.
 
 ## Source requirements
 
+Record:
+
+- author/organization and title;
+- publication/version/date;
+- URL/DOI or controlled document identifier;
+- access date;
+- page/table/section when legally accessible;
+- geography, technology, time, and boundary;
+- extracted value, unit, conversions, and uncertainty;
+- license/confidentiality status.
+
+## Standards
+
+Reference the standard number, edition, amendments, and status. Paraphrase requirements; do not store copyrighted clause text. A purchased copy can be used by an authorized practitioner but should not be committed.
+
+## Database evidence
+
+Record release, system model, dataset UUID/code, geography, reference product, unit, and any modifications. Dataset names alone are insufficient.
+
+## Unsupported gaps
+
+When no defensible data exist:
+
+1. state the gap;
+2. choose a transparent proxy or bounding case;
+3. explain analogy and mismatch;
+4. assign conservative uncertainty;
+5. test materiality;
+6. restrict conclusions if material.
