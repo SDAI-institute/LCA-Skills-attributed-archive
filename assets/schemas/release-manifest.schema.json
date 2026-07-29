@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sdai-lab.example/schemas/lca-release-manifest-1.0.json",
+  "title": "LCA release manifest",
+  "type": "object",
+  "required": [
+    "manifest_version",
+    "study_id",
+    "release_id",
+    "status",
+    "created",
+    "review_status",
+    "file_hashes"
+  ],
+  "properties": {
+    "manifest_version": {
+      "const": "1.0"
+    },
+    "study_id": {
+      "type": "string"
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "file_hashes": {
+      "type": "array"
+    },
+    "review_status": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

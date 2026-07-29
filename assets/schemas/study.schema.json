@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sdai-lab.example/schemas/lca-study-1.0.json",
+  "title": "LCA study metadata",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "study_id",
+    "title",
+    "status",
+    "created",
+    "updated"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "study_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "DRAFT_SCOPE",
+        "SCOPE_FROZEN",
+        "INVENTORY_READY",
+        "CALCULATED",
+        "INTERPRETED",
+        "REVIEWED",
+        "RELEASED"
+      ]
+    },
+    "confidentiality": {
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

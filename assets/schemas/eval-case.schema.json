@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sdai-lab.example/schemas/lca-eval-case-1.0.json",
+  "title": "LCA skill behavioral evaluation case",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "prompt",
+    "risk_level",
+    "expected"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "risk_level": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "expected": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}
