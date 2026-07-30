@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "manifest_version": "1.0",
+  "study_id": "{{SLUG}}",
+  "release_id": "",
+  "title": "{{TITLE}}",
+  "status": "DRAFT",
+  "created": "{{DATE}}",
+  "released": "",
+  "commit": "",
+  "model_version": "",
+  "tool_versions": {},
+  "database_versions": [],
+  "system_models": [],
+  "lcia_methods": [],
+  "scenarios": [],
+  "review_status": "not-reviewed",
+  "authorized_uses": [],
+  "excluded_uses": [],
+  "source_snapshot": "",
+  "file_hashes": [],
+  "sign_off": {
+    "practitioner": "",
+    "reviewer": "",
+    "decision_owner": ""
+  }
+}
