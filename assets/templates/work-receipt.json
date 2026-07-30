@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "study_id": "{{SLUG}}",
+  "receipt_id": "WORK-001",
+  "created": "{{DATE}}",
+  "plan_revision": 1,
+  "authorized_task_ids": [],
+  "completed_task_ids": [],
+  "deferred_task_ids": [],
+  "changed_files": [],
+  "commands_or_tools_used": [],
+  "tests": [],
+  "assumptions_added_or_changed": [],
+  "decisions_added_or_changed": [],
+  "findings": [],
+  "unresolved_blockers": [],
+  "next_gate": "G0",
+  "prepared_by": "",
+  "reviewed_by": ""
+}
