@@ -30,3 +30,51 @@ def main() -> int:
     args = parser.parse_args()
 
     study = args.study.resolve()
+    if not study.is_dir():
+        print(f"ERROR: study directory not found: {study}", file=sys.stderr)
+        return 1
+    output = (args.output.resolve() if args.output else study / "results/release/file-hashes.json")
+    release_manifest = study / "results/release/release-manifest.json"
+
+    excluded = set(DEFAULT_EXCLUDED_PARTS)
+    if args.include_raw:
+        excluded.discard("raw")
+
+    records: list[dict[str, object]] = []
+    for path in sorted(study.rglob("*")):
+        if not path.is_file() or path.resolve() in {output.resolve()}:
+            continue
+        rel = path.relative_to(study)
+        if any(part in excluded for part in rel.parts):
+            continue
+        records.append({"path": rel.as_posix(), "sha256": sha256(path), "bytes": path.stat().st_size})
+
+    payload = {
+        "manifest_version": "1.0",
+        "study_id": study.name,
+        "generated_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+        "hash_algorithm": "sha256",
+        "excluded_parts": sorted(excluded),
+        "files": records,
+    }
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+    if args.update_release:
+        if not release_manifest.exists():
+            print(f"ERROR: release manifest not found: {release_manifest}", file=sys.stderr)
+            return 1
+        try:
+            release = json.loads(release_manifest.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            print(f"ERROR: invalid release manifest: {exc}", file=sys.stderr)
+            return 1
+        release["file_hashes"] = records
+        release_manifest.write_text(json.dumps(release, indent=2) + "\n", encoding="utf-8")
+
+    print(f"Wrote {len(records)} file hashes to {output}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
