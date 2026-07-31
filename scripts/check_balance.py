@@ -36,3 +36,62 @@ def main() -> int:
         reader = csv.DictReader(handle)
         required = {"balance_id", "process_id", "metric", "direction", "value", "unit"}
         missing = required.difference(reader.fieldnames or [])
+        if missing:
+            print(f"ERROR: missing headers: {', '.join(sorted(missing))}", file=sys.stderr)
+            return 1
+        for line, row in enumerate(reader, start=2):
+            metric = (row.get("metric") or "").strip().lower()
+            if args.metric and metric != args.metric.strip().lower():
+                continue
+            direction = (row.get("direction") or "").strip().lower()
+            try:
+                value = float((row.get("value") or "").replace(",", ""))
+            except ValueError:
+                errors.append(f"line {line}: nonnumeric value {row.get('value')!r}")
+                continue
+            if not math.isfinite(value):
+                errors.append(f"line {line}: value is not finite")
+                continue
+            key = (
+                (row.get("balance_id") or "").strip(),
+                (row.get("process_id") or "").strip(),
+                metric,
+                (row.get("unit") or "").strip(),
+                (row.get("scenario") or "baseline").strip(),
+            )
+            if direction in INPUTS:
+                groups[key]["input"] += value
+            elif direction in OUTPUTS:
+                groups[key]["output"] += value
+            elif direction in ACCUMULATIONS:
+                groups[key]["accumulation"] += value
+            else:
+                errors.append(f"line {line}: unknown direction {direction!r}")
+                continue
+            groups[key]["rows"] += 1
+
+    failures = 0
+    if not groups and not errors:
+        errors.append("no balance rows matched")
+    for key, values in sorted(groups.items()):
+        balance_id, process_id, metric, unit, scenario = key
+        residual = values["input"] - values["output"] - values["accumulation"]
+        denominator = max(abs(values["input"]), abs(values["output"] + values["accumulation"]), 1e-30)
+        relative = abs(residual) / denominator
+        passed = relative <= args.tolerance
+        failures += int(not passed)
+        print(
+            f"{'PASS' if passed else 'FAIL'} {balance_id or '-'} {process_id or '-'} "
+            f"{metric or '-'} [{scenario}] input={values['input']:.8g} "
+            f"output={values['output']:.8g} accumulation={values['accumulation']:.8g} "
+            f"residual={residual:.8g} {unit} relative={relative:.3%}"
+        )
+
+    for message in errors:
+        print(f"ERROR {message}", file=sys.stderr)
+    print(f"Checked {len(groups)} balances; {failures} failed; {len(errors)} input errors.")
+    return 1 if failures or errors else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
