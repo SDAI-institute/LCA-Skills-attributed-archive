@@ -16,3 +16,31 @@ Read `references/plan-schema.md`, `references/gate-dependencies.md`, and `refere
 
 ## Plan rules
 
+1. Read the goal and scope, intake brief, existing model/data ledgers, assumptions, decision log, and open findings.
+2. State the baseline model state and the target completion state.
+3. Decompose work into stable task IDs grouped by quality gate, not by conversational turn.
+4. For every task record: objective, inputs, action, tool/skill, output artifact, acceptance criterion, dependencies, owner, review role, and failure/stop condition.
+5. Put irreversible, licensed, high-cost, or claim-affecting operations behind explicit gates.
+6. Include deterministic QA before LCIA, interpretation checks after calculation, and review/fix/recalculation loops.
+7. Distinguish work that can run in parallel from work that depends on a frozen upstream choice.
+8. Mark provisional choices and the sensitivity or data request that resolves them.
+9. Save the plan as `study-plan.md`; do not silently implement while in plan-only mode.
+
+## Required plan sections
+
+- study identity and decision;
+- current state and artifacts inspected;
+- scope freeze criteria;
+- data and inventory work packages;
+- tool/environment qualification;
+- calculation scenarios and method manifest;
+- validation matrix;
+- interpretation and uncertainty plan;
+- specialist review plan;
+- reporting and claim route;
+- release/handoff/compound steps;
+- open decisions and stop conditions.
+
+## Completion gate
+
+A plan is ready only when every task has an observable deliverable and acceptance criterion, all material dependencies are ordered, and no calculation is scheduled before scope and inventory gates.
