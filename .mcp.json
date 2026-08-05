@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "lca-tools": {
+      "command": "python",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/lca_tools/mcp_server.py"],
+      "env": {
+        "LCA_SKILLS_ROOT": "${CLAUDE_PLUGIN_ROOT}",
+        "LCA_PROJECT_ROOT": "${CLAUDE_PROJECT_DIR}"
+      }
+    }
+  }
+}
