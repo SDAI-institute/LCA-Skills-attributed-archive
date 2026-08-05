@@ -1,0 +1,38 @@
+{
+  "name": "lca-skills",
+  "version": "0.2.0",
+  "description": "Expert life cycle assessment workflows, industrial inventories, tool automation, interpretation, and review.",
+  "author": {
+    "name": "SDAI Lab"
+  },
+  "license": "MIT",
+  "keywords": [
+    "life-cycle-assessment",
+    "lca",
+    "openlca",
+    "brightway",
+    "greet",
+    "carbon-footprint",
+    "epd",
+    "industrial-ecology"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "LCA Skills",
+    "shortDescription": "Professional LCA design, modeling, calculation, and review",
+    "longDescription": "A progressive-disclosure expert workflow for ISO-aligned LCA, process-engineered inventories, openLCA, Brightway, GREET, product carbon footprints, EPD and PEF contexts, uncertainty, interpretation, and critical-review preparation.",
+    "developerName": "SDAI Lab",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Frame a defensible life cycle assessment for this product",
+      "Audit this LCA model and identify release-blocking errors",
+      "Build an industrial process inventory from these mass and energy data"
+    ],
+    "brandColor": "#1F6F5F",
+    "screenshots": []
+  }
+}
