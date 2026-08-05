@@ -8,3 +8,18 @@
 
 ## Context and symptom
 
+## Why it was difficult
+
+## Root cause
+
+## Resolution and decision logic
+
+## Validation evidence
+
+## Limits and counterexamples
+
+## Prevention / automated check
+
+## Sources
+
+## Related evals and skills

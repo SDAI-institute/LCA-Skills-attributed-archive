@@ -18,3 +18,33 @@ Compound only when:
 - the issue and root cause are understood;
 - the fix has validation evidence;
 - the lesson generalizes beyond one chat;
+- confidential data can be removed;
+- no restricted dataset rows or standard text are required.
+
+Do not compound speculative conclusions or unresolved modeling debates as facts.
+
+## Procedure
+
+1. Search `knowledge/solutions/` for an existing entry and use `references/solution-template.md`.
+2. Create or update a concise markdown file named `<domain>-<problem>.md`.
+3. Include:
+   - context and symptoms;
+   - why the issue was hard;
+   - root cause;
+   - resolution and decision logic;
+   - validation evidence;
+   - affected tools/databases/method versions;
+   - limits and counterexamples;
+   - prevention or automated check;
+   - sources and date.
+4. Generalize names and values; preserve technical meaning.
+5. Add or update an eval case if the lesson should change agent behavior.
+6. Run repository validation and tests.
+
+## Promotion rule
+
+Promote a solution into a skill reference only after it recurs, is strongly source-backed, or closes a material quality gap. Record the change in `CHANGELOG.md`.
+
+## Deliverable
+
+Return the knowledge file path, validation performed, and any skill/eval updates. Keep the original study decision log as the authoritative case record.
