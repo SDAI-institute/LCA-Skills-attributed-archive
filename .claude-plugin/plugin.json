@@ -1,0 +1,19 @@
+{
+  "name": "lca-skills",
+  "version": "0.2.0",
+  "description": "A modular expert system for ISO-aligned LCA workflows, industrial inventories, openLCA, Brightway, GREET, interpretation, and critical-review preparation.",
+  "author": {
+    "name": "SDAI Lab"
+  },
+  "license": "MIT",
+  "keywords": [
+    "life-cycle-assessment",
+    "lca",
+    "openlca",
+    "brightway",
+    "greet",
+    "carbon-footprint",
+    "epd",
+    "industrial-ecology"
+  ]
+}

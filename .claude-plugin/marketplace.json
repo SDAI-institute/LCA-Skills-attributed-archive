@@ -1,0 +1,29 @@
+{
+  "name": "sdai-lab-skills",
+  "owner": {
+    "name": "SDAI Lab"
+  },
+  "metadata": {
+    "description": "Agent skills for sustainable design and life-cycle intelligence"
+  },
+  "plugins": [
+    {
+      "name": "lca-skills",
+      "source": "./",
+      "description": "Expert LCA methodology, tool, sector, QA, and reporting workflows",
+      "version": "0.2.0",
+      "author": {
+        "name": "SDAI Lab"
+      },
+      "license": "MIT",
+      "keywords": [
+        "lca",
+        "openlca",
+        "brightway",
+        "greet",
+        "epd",
+        "pcf"
+      ]
+    }
+  ]
+}
