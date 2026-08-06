@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+set -eu
+PLUGIN_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+export LCA_SKILLS_ROOT="$PLUGIN_ROOT"
+exec python -m lca_tools.cli "$@"
