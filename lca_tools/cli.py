@@ -80,3 +80,126 @@ def parser() -> argparse.ArgumentParser:
     ol_list = ol_sub.add_parser("list")
     ol_list.add_argument("entity_type")
     ol_list.add_argument("--host", default="127.0.0.1")
+    ol_list.add_argument("--port", type=int, default=8080)
+    ol_list.add_argument("--limit", type=int, default=1000)
+    ol_calc = ol_sub.add_parser("calculate")
+    ol_calc.add_argument("product_system_id")
+    ol_calc.add_argument("--impact-method-id")
+    ol_calc.add_argument("--amount", type=float, default=1.0)
+    ol_calc.add_argument("--host", default="127.0.0.1")
+    ol_calc.add_argument("--port", type=int, default=8080)
+    ol_calc.add_argument("--no-inventory", action="store_true")
+    ol_calc.add_argument("--output")
+
+    bw = sub.add_parser("brightway", help="Use the read-only Brightway adapter")
+    bw_sub = bw.add_subparsers(dest="brightway_command", required=True)
+    bw_sub.add_parser("snapshot")
+    bw_calc = bw_sub.add_parser("calculate")
+    bw_calc.add_argument("--project", required=True)
+    bw_calc.add_argument("--database", required=True)
+    bw_calc.add_argument("--code", required=True)
+    bw_calc.add_argument("--method", required=True, help="JSON array or 'part1 / part2 / category'")
+    bw_calc.add_argument("--amount", type=float, default=1.0)
+    bw_calc.add_argument("--output")
+
+    greet = sub.add_parser("greet", help="Build GREET manifests and ingest result exports")
+    greet_sub = greet.add_subparsers(dest="greet_command", required=True)
+    gm = greet_sub.add_parser("manifest")
+    gm.add_argument("--study-id", required=True)
+    gm.add_argument("--product", default="R&D GREET")
+    gm.add_argument("--release", required=True)
+    gm.add_argument("--revision", default="")
+    gm.add_argument("--platform", required=True)
+    gm.add_argument("--doi", default="")
+    gm.add_argument("--model-file")
+    gm.add_argument("--input-export")
+    gm.add_argument("--result-export")
+    gm.add_argument("--pathway", default="")
+    gm.add_argument("--boundary", default="")
+    gm.add_argument("--functional-basis", default="")
+    gm.add_argument("--output", required=True)
+    gi = greet_sub.add_parser("import-results")
+    gi.add_argument("csv_file")
+    gi.add_argument("--output")
+    return p
+
+
+def parse_method(value: str) -> list[str]:
+    value = value.strip()
+    if value.startswith("["):
+        parsed = json.loads(value)
+        if not isinstance(parsed, list) or not all(isinstance(item, str) for item in parsed):
+            raise LCAToolError("--method JSON must be an array of strings")
+        return parsed
+    return [item.strip() for item in value.split("/") if item.strip()]
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parser().parse_args(argv)
+    try:
+        if args.command == "doctor":
+            payload = doctor_adapter.snapshot(check_openlca=args.check_openlca, host=args.host, port=args.port, timeout=args.timeout)
+            emit(payload, args.output, text=args.text)
+        elif args.command == "study":
+            if args.study_command == "new":
+                emit(workspace.new_study(args.slug, args.title, args.root, overwrite_empty=args.overwrite_empty))
+            elif args.study_command == "validate":
+                payload = workspace.validate_study(args.study, strict=args.strict)
+                emit(payload)
+                return 0 if payload["ok"] else 1
+            elif args.study_command == "balance":
+                payload = workspace.check_balance(args.csv_file, tolerance=args.tolerance, metric=args.metric)
+                emit(payload)
+                return 0 if payload["ok"] else 1
+            elif args.study_command == "claims":
+                payload = workspace.check_claims(args.study, warn_only=args.warn_only)
+                emit(payload)
+                return 0 if payload["ok"] else 1
+            elif args.study_command == "compare":
+                payload = workspace.compare_results(
+                    args.baseline, args.candidate, keys=args.keys, value=args.value, unit=args.unit,
+                    rtol=args.rtol, atol=args.atol, allow_differences=args.allow_differences,
+                )
+                emit(payload)
+                return 0 if payload["ok"] else 1
+            elif args.study_command == "hash":
+                emit(workspace.hash_manifest(args.study, update_release=args.update_release, include_raw=args.include_raw))
+        elif args.command == "openlca":
+            if args.openlca_command == "snapshot":
+                emit(openlca_adapter.snapshot(host=args.host, port=args.port, check_endpoint=args.check_endpoint, timeout=args.timeout))
+            elif args.openlca_command == "list":
+                emit(openlca_adapter.list_descriptors(args.entity_type, host=args.host, port=args.port, limit=args.limit))
+            elif args.openlca_command == "calculate":
+                payload = openlca_adapter.calculate(
+                    args.product_system_id, args.impact_method_id, amount=args.amount,
+                    host=args.host, port=args.port, include_inventory=not args.no_inventory,
+                )
+                emit(payload, args.output)
+        elif args.command == "brightway":
+            if args.brightway_command == "snapshot":
+                emit(brightway_adapter.snapshot())
+            elif args.brightway_command == "calculate":
+                payload = brightway_adapter.calculate(
+                    args.project, args.database, args.code, parse_method(args.method), amount=args.amount,
+                )
+                emit(payload, args.output)
+        elif args.command == "greet":
+            if args.greet_command == "manifest":
+                emit(greet_adapter.build_manifest(
+                    study_id=args.study_id, product=args.product, release=args.release,
+                    revision=args.revision, platform=args.platform, doi=args.doi,
+                    model_file=args.model_file, input_export=args.input_export,
+                    result_export=args.result_export, pathway=args.pathway,
+                    boundary=args.boundary, functional_basis=args.functional_basis,
+                    output=args.output,
+                ))
+            elif args.greet_command == "import-results":
+                emit(greet_adapter.import_results(args.csv_file, output=args.output))
+        return 0
+    except (LCAToolError, OSError, ValueError, json.JSONDecodeError) as exc:
+        print(json.dumps({"error": type(exc).__name__, "message": str(exc)}, indent=2), file=sys.stderr)
+        return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
