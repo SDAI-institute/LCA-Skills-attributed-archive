@@ -1,0 +1,87 @@
+{
+  "lca-autopilot": {
+    "argument-hint": "<study request or workspace; autonomous scope and deliverable>",
+    "disable-model-invocation": true
+  },
+  "lca-brightway": {
+    "argument-hint": "<Brightway task, codebase, error, or study workspace>"
+  },
+  "lca-calculate": {
+    "argument-hint": "<study workspace, tool, scenario, and calculation target>"
+  },
+  "lca-compound": {
+    "argument-hint": "<validated lesson or study finding>"
+  },
+  "lca-data": {
+    "argument-hint": "<data need, database, dataset list, or study workspace>"
+  },
+  "lca-debug": {
+    "argument-hint": "<error, anomalous result, model, or study workspace>"
+  },
+  "lca-doctor": {
+    "argument-hint": "<repository or study workspace> [optional endpoint checks]"
+  },
+  "lca-epd-pcf": {
+    "argument-hint": "<PCF, EPD, PEF, product, program, or PCR>"
+  },
+  "lca-expert": {
+    "argument-hint": "<study request, question, or path to an existing LCA workspace>"
+  },
+  "lca-greet": {
+    "argument-hint": "<GREET pathway, technology, version, or study workspace>"
+  },
+  "lca-handoff": {
+    "argument-hint": "<study workspace> [create or resume]"
+  },
+  "lca-impact": {
+    "argument-hint": "<study context, region, method question, or calculated inventory>"
+  },
+  "lca-intake": {
+    "argument-hint": "<request, product, decision, or existing study path>"
+  },
+  "lca-interpret": {
+    "argument-hint": "<results, model, or study workspace>"
+  },
+  "lca-inventory": {
+    "argument-hint": "<process, product system, dataset, or study workspace>"
+  },
+  "lca-openlca": {
+    "argument-hint": "<openLCA task, database/model, or study workspace>"
+  },
+  "lca-organization-social": {
+    "argument-hint": "<organization, portfolio, Scope 3, O-LCA, OEF, or social LCA request>"
+  },
+  "lca-plan": {
+    "argument-hint": "<study workspace or scoped LCA request>"
+  },
+  "lca-prospective": {
+    "argument-hint": "<future technology, policy, scenario, or decision>"
+  },
+  "lca-report": {
+    "argument-hint": "<study workspace> [audience or report type]"
+  },
+  "lca-research": {
+    "argument-hint": "<research question, data gap, or study workspace>"
+  },
+  "lca-review": {
+    "argument-hint": "<model/report/study workspace> [review purpose]"
+  },
+  "lca-scope": {
+    "argument-hint": "<study request or lca/studies/<slug>>"
+  },
+  "lca-sector": {
+    "argument-hint": "<sector, technology, product, or process>"
+  },
+  "lca-setup": {
+    "argument-hint": "<study slug> [--title <title>]"
+  },
+  "lca-simplify": {
+    "argument-hint": "<model, study workspace, or workflow to simplify>"
+  },
+  "lca-validate": {
+    "argument-hint": "<study workspace or artifact> [target gate]"
+  },
+  "lca-work": {
+    "argument-hint": "<study workspace and approved task IDs>"
+  }
+}
