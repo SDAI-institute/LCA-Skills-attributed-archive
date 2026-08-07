@@ -1,0 +1,1821 @@
+{
+  "schema_version": "1.0",
+  "name": "LCA-skills",
+  "version": "0.2.0",
+  "release_date": "2026-08-07",
+  "qualification": "source-structural-and-local-runtime",
+  "qualification_note": "This source archive was built deterministically. Target-host import and licensed LCA-tool scientific qualification remain separate evidence layers.",
+  "file_count": 362,
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "sha256": "ecfbdd3cc62735c25fcece3e9118261a66428a359c2e132b87561bf0e88be4d9",
+      "bytes": 584
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "2fe0ae2686dae4cfa1394b4ae876fa474a6c35e1e31659568bcdc195a6837b66",
+      "bytes": 452
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "e4f9f88e7dded22fde4333bc926269c0a2a0f37669a44f9d2625da98ea049aa3",
+      "bytes": 1234
+    },
+    {
+      "path": ".cursor-plugin/plugin.json",
+      "sha256": "d0730741985639d4ca07db56174996b4922b2002ef368ed0eb0beaeda3bfe629",
+      "bytes": 385
+    },
+    {
+      "path": ".editorconfig",
+      "sha256": "237bae4c43a985a228e764b1bd77f8fdceef4e927414f329c4a3c56688d946e7",
+      "bytes": 254
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "2bde09d7bcc56f5a1400da4d27efe53f6593fb9f8b8c7ce760b85229bcf5c940",
+      "bytes": 92
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "c6dfdeed33f96ee4053442b622dd6918fdd0ae8dba2a62b12cce7244a258e789",
+      "bytes": 1242
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "b406a1b650c6852e8ec28f8767f645abaf54c817077e4a96fa4e8af65e128f47",
+      "bytes": 290
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "fe13723ebd97bbcc00a78e7a25c0c6fe6675a235ba713a1e278b97882e921ac2",
+      "bytes": 270
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "be3f36ff342c5aaef3b079788be14d159028d25796c8d1dc1799c1a574dc4377",
+      "bytes": 4439
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "6a71f6b74dece1b6f18009aba962225b0ba627c111b787650fb470e340683f67",
+      "bytes": 4228
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "7e49d91e0993fcf8ae05db879ebcdd79f8fb9223b9f3b9ba7eab5e292af61b51",
+      "bytes": 2433
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "8ef24a17228dff33a6bc66991b4207f3b0d971bf3e59eac8d703a484aaf79689",
+      "bytes": 1491
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "9b74b612df6ab58d58c3012818bdbd1857b8e8ba8c73fe1e0085b855ceb15953",
+      "bytes": 1250
+    },
+    {
+      "path": "Makefile",
+      "sha256": "9183cfcb713dc5b197453d9f139bb2b7e1ea2ca2d289031213eea50f07252907",
+      "bytes": 1265
+    },
+    {
+      "path": "README.md",
+      "sha256": "1ed6e6d46f871b682784e938be9262a2191c51881d6edd40c3a89d55cb0d1d02",
+      "bytes": 16172
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "5478c69b7196c2b7d7885932731417912952feeec9d2fb4171ed36cf608b61c2",
+      "bytes": 1093
+    },
+    {
+      "path": "agents/lca-claims-reviewer.md",
+      "sha256": "bf748484eda9b6b1029db3c4620e6cb068a3f1294092652773f16cac1301905b",
+      "bytes": 880
+    },
+    {
+      "path": "agents/lca-critical-reviewer.md",
+      "sha256": "76597aae69153b1e6d4f3baf63c980ec08ceb1aa4e86eabe0a1d86f8345beafe",
+      "bytes": 887
+    },
+    {
+      "path": "agents/lca-data-auditor.md",
+      "sha256": "939e74dfad00995d910cec4a1921b663738962af8a1657bc26db46e4ed10ac49",
+      "bytes": 866
+    },
+    {
+      "path": "agents/lca-lcia-specialist.md",
+      "sha256": "772d90f049867393c5af0f277e8c49c7d9e52a3b71f5dd7d822ea7d5a2ec0e49",
+      "bytes": 869
+    },
+    {
+      "path": "agents/lca-methodologist.md",
+      "sha256": "f574730e550b71004609131fdc4d46153d521c8b7b824014886405b31505a7d3",
+      "bytes": 898
+    },
+    {
+      "path": "agents/lca-process-engineer.md",
+      "sha256": "5ede33bc3ae58a99b55ad4ffbef54e878aa4049cd574bc04edb06b619daf5e81",
+      "bytes": 900
+    },
+    {
+      "path": "agents/lca-sector-specialist.md",
+      "sha256": "fb56602d6c5445a98d5b22ffb8c6cd1b4177486aea78a3b914da1061473924f5",
+      "bytes": 864
+    },
+    {
+      "path": "agents/lca-tool-integrator.md",
+      "sha256": "d289daa8ea8b93ed5787ea2b93764499f0f75a53771c60267d3e97776c386f18",
+      "bytes": 904
+    },
+    {
+      "path": "agents/lca-uncertainty-specialist.md",
+      "sha256": "ceee6f00973b695e60764fb4e8b6eba43f4d96ad0bd1b977c3fff97c74653531",
+      "bytes": 884
+    },
+    {
+      "path": "assets/schemas/eval-case.schema.json",
+      "sha256": "765914af0b583c94c87ebb368960bf5c4b1b9634f39c087469318d3ba6c15126",
+      "bytes": 648
+    },
+    {
+      "path": "assets/schemas/release-manifest.schema.json",
+      "sha256": "f7af5a16e42acfd814a5dcf04edf9891606e2a5faae759c8d1b74a0acba076a4",
+      "bytes": 696
+    },
+    {
+      "path": "assets/schemas/study.schema.json",
+      "sha256": "fb6d4f748c7ea28b59648e3cc5851f5b98e05ae2769ac931422b3fbf44bbfd40",
+      "bytes": 908
+    },
+    {
+      "path": "assets/templates/assumptions.csv",
+      "sha256": "d79e92843351b756692be2cf2503dee42afdaf30181943a1fd0682773dce9378",
+      "bytes": 156
+    },
+    {
+      "path": "assets/templates/balances.csv",
+      "sha256": "c7960bb1978bf7f0856588ee7a7c00ccc7b5562500aa40982da31e06b9590b66",
+      "bytes": 97
+    },
+    {
+      "path": "assets/templates/brightway-run-manifest.yaml",
+      "sha256": "6d267b9e88458f8b4fb8f5d7c60fb9c2c4a8edef9381a1ec8c904bd3432484d2",
+      "bytes": 791
+    },
+    {
+      "path": "assets/templates/calculation-request.yaml",
+      "sha256": "e4934f1b2ed299d47506f044a72fc7813c84ac385e5610080c119b4fc6b70e3b",
+      "bytes": 1019
+    },
+    {
+      "path": "assets/templates/claims-register.csv",
+      "sha256": "d9f754d74cd6d044c0ca4b3251fe59aa2cc71f8ffd40655e2463268186bc340c",
+      "bytes": 155
+    },
+    {
+      "path": "assets/templates/contribution-results.csv",
+      "sha256": "60644760b6f29b9ec6c34b7821daed6dc062f8bc03b34e201c306e48a4aa1938",
+      "bytes": 131
+    },
+    {
+      "path": "assets/templates/data-register.csv",
+      "sha256": "85c8b0b1d053054e50989b6c02c78c131bf8aec91158b4f17badbd2486a17736",
+      "bytes": 228
+    },
+    {
+      "path": "assets/templates/data-request.csv",
+      "sha256": "07273a2b5ed194a6fde0b0c533cec953e3d11008ede04e36182edf8719ab7af2",
+      "bytes": 180
+    },
+    {
+      "path": "assets/templates/decision-log.md",
+      "sha256": "d6cea2c5facb733e4a5b6474aa6c0b5771eb445675ca62461754b19855b48050",
+      "bytes": 610
+    },
+    {
+      "path": "assets/templates/goal-and-scope.md",
+      "sha256": "3e081d942193d5c3bd7fbf2dc36fb8be6578a085de791a91db8b9edc1045b41a",
+      "bytes": 4662
+    },
+    {
+      "path": "assets/templates/greet-run-manifest.yaml",
+      "sha256": "e0b222efeaec95b63278933afc91c50d6cb0f9b181c3b3c5152fff0212d939f3",
+      "bytes": 758
+    },
+    {
+      "path": "assets/templates/handoff.json",
+      "sha256": "3d507fba3f4b5673c5e2ef93260659f56c545131f0b9fd2870bbea639e1452a2",
+      "bytes": 781
+    },
+    {
+      "path": "assets/templates/handoff.md",
+      "sha256": "b6135831f3c53e0a69ef4f00f618a9e69ac0ed96d3ece78c006067f0547002aa",
+      "bytes": 1307
+    },
+    {
+      "path": "assets/templates/impact-results.csv",
+      "sha256": "db7c2575e9f87c8cb457b00cd35f7c9a0ac7c3427ae313224407d060063531cc",
+      "bytes": 182
+    },
+    {
+      "path": "assets/templates/intake-brief.md",
+      "sha256": "a0f8097548024b094cb45188aca5290749d597056a6b946de1ea19cc0fc73213",
+      "bytes": 1756
+    },
+    {
+      "path": "assets/templates/lcia-method-manifest.yaml",
+      "sha256": "8058d6f6d39aa3befd9f4dd614fbf30c5beb46615a06d90de568afa65b07f417",
+      "bytes": 541
+    },
+    {
+      "path": "assets/templates/model-ledger.csv",
+      "sha256": "33480f3a3eaf293d10bbc3f78e739aa675424175f13d3da7368a4225dbf7a126",
+      "bytes": 196
+    },
+    {
+      "path": "assets/templates/openlca-run-manifest.yaml",
+      "sha256": "7ab94d7e8a20fa9fefc7ce43f2844c769e11d7618d13b5006515a73a7aadec85",
+      "bytes": 1000
+    },
+    {
+      "path": "assets/templates/parameters.csv",
+      "sha256": "0b750409857478eb46f2d54bd2f46196070d63b36acc56a7ee2baacce286d7a0",
+      "bytes": 139
+    },
+    {
+      "path": "assets/templates/process-map.md",
+      "sha256": "8a7934ab4a2d50d943ec3aeba5c5f02df436b225651de18c37a8654d1497ad83",
+      "bytes": 1622
+    },
+    {
+      "path": "assets/templates/qa-checklist.md",
+      "sha256": "fca9173f722c3e3d6462e7c3fd9bfacf23e7f8ddffd7983dfbd9fac82e1a7486",
+      "bytes": 3103
+    },
+    {
+      "path": "assets/templates/release-manifest.json",
+      "sha256": "69998ae4cd4d4eee89d6aea5b72bb958182aaa659c89c88855f1cc4842bfb19e",
+      "bytes": 565
+    },
+    {
+      "path": "assets/templates/report-outline.md",
+      "sha256": "b8fcce532946dd7ee5e334bf0ae91695c6a0eba91fd505ed06947b7848ebe098",
+      "bytes": 1335
+    },
+    {
+      "path": "assets/templates/review-findings.csv",
+      "sha256": "e164f692f60b1b6ec5f1b661d7c54851b994e3c2d39d0cb7ab7dfb46d1fb708c",
+      "bytes": 137
+    },
+    {
+      "path": "assets/templates/review-plan.md",
+      "sha256": "0ca1373eab8630fe99638c3c6bf831923b0ce9c67099c7c638fbebbce3431c4f",
+      "bytes": 1193
+    },
+    {
+      "path": "assets/templates/review-response-log.csv",
+      "sha256": "eb4626448de1112565f53523811fc16f4d16e8c3dbd8d4692c2d69bed0d39a93",
+      "bytes": 155
+    },
+    {
+      "path": "assets/templates/scenario-register.csv",
+      "sha256": "bca9846fcda6bfec3b4d254362ec6ef749cb07194d60d996d2cc4109a98f9d23",
+      "bytes": 176
+    },
+    {
+      "path": "assets/templates/study-plan.md",
+      "sha256": "c8b6d2ba25cf1b04b8176127d7c33175b4ad10e55f0ae6c649b13448f33ca623",
+      "bytes": 4282
+    },
+    {
+      "path": "assets/templates/study.yaml",
+      "sha256": "f5b87d54b20a1e37db06b18a5e3e962090ff7fb2dc1d76e400bdabcc5d6684d5",
+      "bytes": 676
+    },
+    {
+      "path": "assets/templates/validation-report.json",
+      "sha256": "5c39708ef4cfa7bf96f0e099d334442b890470a2dc30b54e1e6f684ba01f9354",
+      "bytes": 590
+    },
+    {
+      "path": "assets/templates/work-receipt.json",
+      "sha256": "fe863d5610825191df49c3067e4b5ed778c64a64033f582ce22b78893af62b43",
+      "bytes": 469
+    },
+    {
+      "path": "bin/lca-skills",
+      "sha256": "40fcbf936897083c6d3711e200a9763f1d71b44751c4772f4bb19748c1ad91fc",
+      "bytes": 158
+    },
+    {
+      "path": "bin/lca-skills.cmd",
+      "sha256": "720315eff6a51a5fe032330341c0e386aa5af1296940f0277d0fe6d25cb310fd",
+      "bytes": 67
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "f8e3e48bacec7ff79be57d1c1a571c0077d8e990f5a64695bfea6f27c956f324",
+      "bytes": 10615
+    },
+    {
+      "path": "docs/compound-workflow.md",
+      "sha256": "5bb4b1b05fdab9146ebdd75852ca754aa3a5f29c94d3a8304d5d3e6973ed5e49",
+      "bytes": 7224
+    },
+    {
+      "path": "docs/evals.md",
+      "sha256": "364adb9a32edef64a7e3f478626f40540ccd25fe5347a559e7063ca42d0892de",
+      "bytes": 8501
+    },
+    {
+      "path": "docs/installation.md",
+      "sha256": "a9be8c9c98c4e5ed3148e33f23fe1c33096ff4c793484c8d734ca0543e5ca9c7",
+      "bytes": 12326
+    },
+    {
+      "path": "docs/platforms/chatgpt.md",
+      "sha256": "0b1a196515d9ff63d9b1213c5f314a2ee79ab6fe8f4d0dc834c68bb6ff47870f",
+      "bytes": 4803
+    },
+    {
+      "path": "docs/platforms/claude-ai.md",
+      "sha256": "156deb263e99506bb455435c2cbe54050ad3a3baac7bb4707b986b4d22fc22fa",
+      "bytes": 4432
+    },
+    {
+      "path": "docs/platforms/claude-code.md",
+      "sha256": "24955f18fef57e9973d1dc9446ac4bfba5cfca37c5a582bf5df27f55d6fd532f",
+      "bytes": 5941
+    },
+    {
+      "path": "docs/platforms/codex.md",
+      "sha256": "530f563ee6f372ca51b846df7f5aff99e815c6389eefb37c21e5fad949485fe8",
+      "bytes": 3293
+    },
+    {
+      "path": "docs/platforms/host-qualification.md",
+      "sha256": "3e6df1237112844daa99ec8fe7491cd073ef1f12a23ab139dfa89762051e66c1",
+      "bytes": 5614
+    },
+    {
+      "path": "docs/repository-handoff.md",
+      "sha256": "729283261fddc0f170744b19bd93c1a3a912b6cb71409e9d72e300c74d24c6da",
+      "bytes": 4299
+    },
+    {
+      "path": "docs/research/00-executive-notes.md",
+      "sha256": "8b5f6980e7407934e7278490cf3a879053525cc38f33a41329df4b0c93c40555",
+      "bytes": 5893
+    },
+    {
+      "path": "docs/research/01-standards-and-guidance.md",
+      "sha256": "2fe3e7a766f66b7cee235f26d8553bae7a09358ea4ec29f406b89501dc1cb7f1",
+      "bytes": 6252
+    },
+    {
+      "path": "docs/research/02-methodology-and-conventions.md",
+      "sha256": "a20febbfc98eab752e22874127b166b5226631826488ea49690d69594355db56",
+      "bytes": 8005
+    },
+    {
+      "path": "docs/research/03-industrial-process-engineering.md",
+      "sha256": "67895de658a61b12cb95f1d45bcd53681cdd1d4ef20e6e01bdf8db8b2aebf225",
+      "bytes": 6235
+    },
+    {
+      "path": "docs/research/04-tools-and-interoperability.md",
+      "sha256": "ab51c1f6254f437867b2d5f1ad4ccb611b604a374c1b0bf8e9c94a17de4dc60d",
+      "bytes": 7779
+    },
+    {
+      "path": "docs/research/05-databases-and-lcia.md",
+      "sha256": "6ab74e8051740f2b382ff0f7d79869e6c5f39ee8c99dba4ab3efd7742fc2c961",
+      "bytes": 6343
+    },
+    {
+      "path": "docs/research/06-sector-knowledge.md",
+      "sha256": "5953d6bf0d30c02a0b53c3a760acd48fff372b651ea1b9f7b7c8804583730c9b",
+      "bytes": 4469
+    },
+    {
+      "path": "docs/research/07-expert-reasoning-qa-review.md",
+      "sha256": "d5e945fc484e9851f5db0ac170b59f0a2b208ad040e5896c7ccc6c2f9fc6b387",
+      "bytes": 5407
+    },
+    {
+      "path": "docs/research/08-legal-licensing-epistemics.md",
+      "sha256": "9a5ad28abb8c17d6efcf15916630846d6b15224f63ddbede24f406be767a5ea5",
+      "bytes": 3502
+    },
+    {
+      "path": "docs/research/09-roadmap.md",
+      "sha256": "2e1ec4d6d2baee5efe8278a90b3892bcd81e8059016e143b2716a391ce8d0734",
+      "bytes": 4388
+    },
+    {
+      "path": "docs/research/10-evaluation-strategy.md",
+      "sha256": "64a9f36f5427a93452e4aae1f43bf18e1eb2d606b3165979910c8ac1148293b0",
+      "bytes": 4425
+    },
+    {
+      "path": "docs/research/11-current-version-notes-2026-08.md",
+      "sha256": "810134e75da5f0c441d16fd0c679c2338feaebd39534a7fcea233f863748a60c",
+      "bytes": 4610
+    },
+    {
+      "path": "docs/research/README.md",
+      "sha256": "d448c459a9261a8fcb16ee91cd1f537a2ba26870ee1fcfc452478392f28972e2",
+      "bytes": 1060
+    },
+    {
+      "path": "docs/runtime-adapters.md",
+      "sha256": "16819a61b81bf276563b567218415df967b82ff636bd274f8bc2ba47ec99b7fd",
+      "bytes": 6587
+    },
+    {
+      "path": "docs/skill-catalog.md",
+      "sha256": "66bc27498f3fc132bac7c1c60de10e2463b76370d20fe0032959cb93916ddbab",
+      "bytes": 9064
+    },
+    {
+      "path": "docs/source-register.md",
+      "sha256": "fd1407d76acaa909901adb0db514cf19d839f53cccaacccca2513e16dc75c200",
+      "bytes": 25121
+    },
+    {
+      "path": "docs/tool-integration-test-plan.md",
+      "sha256": "94338ecc0c3051e6fb81166b6abd55b5fc65837d00864567e0d289b7ac9945b8",
+      "bytes": 10885
+    },
+    {
+      "path": "docs/update-policy.md",
+      "sha256": "cdb6361de56fda0ed5480ba152525cdc39ee03b42cd5afe645f64695f8e384de",
+      "bytes": 3846
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/README.md",
+      "sha256": "9611fa20834dd35efd0320ded7738d0893252cc4767d6008b589a39f65fdb051",
+      "bytes": 783
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/assumptions.csv",
+      "sha256": "bc9810d18ac254cfc4cb267ebaf4729526d87da4c6c237d67ffb19228b71b99b",
+      "bytes": 443
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/balances.csv",
+      "sha256": "d428ebd56d5167bc58371f3028a1648f477ef231a44e7e60cdfd88b0b38e686f",
+      "bytes": 341
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/claims-register.csv",
+      "sha256": "d9f754d74cd6d044c0ca4b3251fe59aa2cc71f8ffd40655e2463268186bc340c",
+      "bytes": 155
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/data-register.csv",
+      "sha256": "bbe7dea1119c59605b5ffe339f5cad4b223d1195bc88487326d2244a42e848d4",
+      "bytes": 1206
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/data-request.csv",
+      "sha256": "07273a2b5ed194a6fde0b0c533cec953e3d11008ede04e36182edf8719ab7af2",
+      "bytes": 180
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/data/private/.gitignore",
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+      "bytes": 14
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/decision-log.md",
+      "sha256": "5b537c4c054446601abd0952befaad6f691404f6d67472a04006d1ad78dcde2f",
+      "bytes": 652
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/goal-and-scope.md",
+      "sha256": "bf4ab6f4c0f311900943ee89b3a85e2ce0ce4b9bff6050c2ab005d1179092a70",
+      "bytes": 2161
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/handoff.json",
+      "sha256": "22b42ffdee4e9b2448d2ffdb12a5f7cbec43596193c226798c955a16367fd5c7",
+      "bytes": 822
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/handoff.md",
+      "sha256": "42ece6521fda98099adeff415aec87d94a71407a05818f197efde9893766d033",
+      "bytes": 1373
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/intake-brief.md",
+      "sha256": "2568f89bd95063bdf625d96219ce2a2406eff182621818ec1fb75a20f7ebfdef",
+      "bytes": 1818
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/model-ledger.csv",
+      "sha256": "0687ddb63e31ac354429d87e0a80737ce86299663d970458e35a18b5b8d1dab9",
+      "bytes": 800
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/parameters.csv",
+      "sha256": "f6ff18623fb1159900f02f2769d82803992bb01f2d10ff11ffe959e0a7a638ea",
+      "bytes": 435
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/process-map.md",
+      "sha256": "246bd6def0f627054076285fb5200ddeccb7e093bac9489f30e874879df0e97c",
+      "bytes": 954
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/qa-checklist.md",
+      "sha256": "7acf430177e4a3d592a3a067fb65c6f7e23a672415e2eafc2a4521ca318cef7e",
+      "bytes": 3143
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/report/report-outline.md",
+      "sha256": "2b7f2408aafcb5f04a60c1fafa02a6ccd2bd3eb294d73abc66804104e12a53cc",
+      "bytes": 1397
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/results/processed/contribution-results.csv",
+      "sha256": "60644760b6f29b9ec6c34b7821daed6dc062f8bc03b34e201c306e48a4aa1938",
+      "bytes": 131
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/results/processed/impact-results.csv",
+      "sha256": "db7c2575e9f87c8cb457b00cd35f7c9a0ac7c3427ae313224407d060063531cc",
+      "bytes": 182
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/results/raw/.gitignore",
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+      "bytes": 14
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/results/release/release-manifest.json",
+      "sha256": "572d6dce2d6ed682480c55edc8110f49cddf14e96a56e16dc78f2622b168a33c",
+      "bytes": 627
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/results/validation/validation-report.json",
+      "sha256": "d81d602ad21b7a8bdd87ef9d4712682391a1bdcd131d7645bdfef249e25e473d",
+      "bytes": 612
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/review/review-findings.csv",
+      "sha256": "e164f692f60b1b6ec5f1b661d7c54851b994e3c2d39d0cb7ab7dfb46d1fb708c",
+      "bytes": 137
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/review/review-plan.md",
+      "sha256": "f6f1e25e86c13fcf32d6ee26b64d8623a58cb3c67578aa0809148f8a0c54a740",
+      "bytes": 1233
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/review/review-response-log.csv",
+      "sha256": "eb4626448de1112565f53523811fc16f4d16e8c3dbd8d4692c2d69bed0d39a93",
+      "bytes": 155
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/scenario-register.csv",
+      "sha256": "309e42c3efcc36fa751a130ab29bbcd64bea316cb0db2e86a367beb21f2de4ff",
+      "bytes": 640
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/study-plan.md",
+      "sha256": "5bd6d5f17622a7545e81f4701f88f67cf8a453f24a73cb9f8781b5844c6fcc7d",
+      "bytes": 4344
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/study.yaml",
+      "sha256": "9d2f7ac8766966e42f8a03ff77c056ce47d97d9564e804ea9ab927cbd7f13f04",
+      "bytes": 1238
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/tool-runs/brightway-run-manifest.yaml",
+      "sha256": "33f409e9552b3ff05bfd75a7b18541aad6ffd53b6a47f8b5d1434067d4028df6",
+      "bytes": 458
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/tool-runs/calculation-request.yaml",
+      "sha256": "7ea78fc6d4da222c13b9a8288356ad293d21f610609437d2e7ae81dc795453ab",
+      "bytes": 1041
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/tool-runs/greet-run-manifest.yaml",
+      "sha256": "baea38314373e3210062b3283e7aece1611f1aa0f9c17a8f5bc8c94652025095",
+      "bytes": 463
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/tool-runs/lcia-method-manifest.yaml",
+      "sha256": "c8a68621d346662326b70ae8d5a7d005ab049ab6153c129bf356ccf5aae501b7",
+      "bytes": 563
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/tool-runs/openlca-run-manifest.yaml",
+      "sha256": "4e41579ee42b8a09794bd4e58008ed055274d962973893800b8e40295a7e85a9",
+      "bytes": 533
+    },
+    {
+      "path": "examples/synthetic-hydrogen-screening/work-receipt.json",
+      "sha256": "75f55842ecd41d6c9e90ca6a75a70d1ed5827bbc82b0e7c07fb50eaec8d3ff5f",
+      "bytes": 491
+    },
+    {
+      "path": "hooks/hooks.json",
+      "sha256": "4d1103ad6290ad4ec70e6816009dc7d6d57d73845c3e404dc1bf691ab81f478f",
+      "bytes": 264
+    },
+    {
+      "path": "knowledge/solutions/README.md",
+      "sha256": "693c59a4ec52968fdfd930881f40459f4d895e75fe8921dd6c4245b060869bf2",
+      "bytes": 515
+    },
+    {
+      "path": "lca/studies/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "lca_tools/__init__.py",
+      "sha256": "41b527906c732933feffa2cb44f00ceefc65e64c4b97a3a12b2e6f9666ac69ec",
+      "bytes": 130
+    },
+    {
+      "path": "lca_tools/brightway.py",
+      "sha256": "cdbd7f69fa7569899c4eb5daa11217ab29368afd3aeb852c72b7ba31cc34533d",
+      "bytes": 4730
+    },
+    {
+      "path": "lca_tools/cli.py",
+      "sha256": "29347faa6fa061ecab7712ea128057e149b50f873f13ba8e441af4df3f9cd8be",
+      "bytes": 9909
+    },
+    {
+      "path": "lca_tools/common.py",
+      "sha256": "3c88245467af2737089c77832049c3ac2e96846886005626964d4c8fd91d988f",
+      "bytes": 4760
+    },
+    {
+      "path": "lca_tools/doctor.py",
+      "sha256": "ea5cca0dc58b8ad54cf86cae3ad7c1a4f10152732863733c47c858e6c99f54af",
+      "bytes": 5202
+    },
+    {
+      "path": "lca_tools/greet.py",
+      "sha256": "343629900fc2d3a76997766d9f5f3f971a0ad36e15a1fb37d5fc058ed9f16420",
+      "bytes": 4729
+    },
+    {
+      "path": "lca_tools/mcp_server.py",
+      "sha256": "72e1f3179830a90441c6dc5a0738220bcd40a59e9b6cc8b67757afe403843e16",
+      "bytes": 15243
+    },
+    {
+      "path": "lca_tools/openlca.py",
+      "sha256": "4b1a2b2467f68dd3e7051278285f6bce461c98d103073b516878808845d5a371",
+      "bytes": 6885
+    },
+    {
+      "path": "lca_tools/workspace.py",
+      "sha256": "14a60671a11bd7350e6b59308700840ada4d917b444417f97d4d16a3c9aa4ed2",
+      "bytes": 2968
+    },
+    {
+      "path": "platforms/README.md",
+      "sha256": "1211d68c0a682c27c3b81f3a58d311beb1a17cdc650d612bd8dac6f47c067707",
+      "bytes": 1537
+    },
+    {
+      "path": "platforms/claude-code/skill-overrides.json",
+      "sha256": "04a90d906b99eef0e7b217b305ed3c9010b315816b9f91341e2b24c5774f7c53",
+      "bytes": 2752
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "ce616c77e78eb06692c8633df8193b91f62fc341e446bdac1f165213d3da7996",
+      "bytes": 239
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "5e508127691e034025a33f45716e9f657fc3613c4c50af9e20015bd221348b17",
+      "bytes": 619
+    },
+    {
+      "path": "scripts/build_distributions.py",
+      "sha256": "dd2094a654c581bdcdb3bf87ad591295425b2b1b63091e64bb9035c8846b45d8",
+      "bytes": 23576
+    },
+    {
+      "path": "scripts/build_source_release.py",
+      "sha256": "53b1b23d24c2569148b7b558679268a1461842c0d9ba46637c696acf0fabaa56",
+      "bytes": 5353
+    },
+    {
+      "path": "scripts/check_balance.py",
+      "sha256": "64e7c79e52b266428717c9604c013b4d915a5ea855a23d7a72b69c8945f9f20d",
+      "bytes": 4096
+    },
+    {
+      "path": "scripts/check_claims.py",
+      "sha256": "5b750d7c96355373e2b2d565302be7955ae87b10726a2b2833cdd2f40c7ebc6a",
+      "bytes": 3304
+    },
+    {
+      "path": "scripts/check_markdown_links.py",
+      "sha256": "83152b4ace8c076b2724605423fd134898d715c0908ca9e6bb52467679026f25",
+      "bytes": 1417
+    },
+    {
+      "path": "scripts/compare_results.py",
+      "sha256": "d4ec8c9fd55c4b7f700a9e1be1163766ebd71a740ef1796bc3c786e64c126d75",
+      "bytes": 3666
+    },
+    {
+      "path": "scripts/hash_manifest.py",
+      "sha256": "219fa34f25766d4644afab650da0573c768904489b3cc7f624a5ca1c6de28056",
+      "bytes": 2908
+    },
+    {
+      "path": "scripts/hook_validate.py",
+      "sha256": "1885c81ebc2416e76883b58e3784c010e40635f45fae983985435eff3ffc9f21",
+      "bytes": 2345
+    },
+    {
+      "path": "scripts/host_qualification.py",
+      "sha256": "38a4b53352cda8b3616186e5a399fd6d100c09d358db73adfcafbb45842f7374",
+      "bytes": 9798
+    },
+    {
+      "path": "scripts/new_study.py",
+      "sha256": "8320e5469c0e500d76a9932c3a853d5ec3f8f0d797874d5fd9d76e433becac54",
+      "bytes": 5131
+    },
+    {
+      "path": "scripts/repo_checks.py",
+      "sha256": "23dc8e544bd6ed9ac1ce03807fdf7ff179f503ea756f729ab8490e9daf931641",
+      "bytes": 4005
+    },
+    {
+      "path": "scripts/run_reference_lca.py",
+      "sha256": "7036b3a2a9e639b5f3601879386299f7cd96c0e0728bc91a908b1ae5ba7f9b73",
+      "bytes": 5732
+    },
+    {
+      "path": "scripts/sync_skills.ps1",
+      "sha256": "a8824b20e33804c8d90fb1ab9ef2d6b213b68fa1358b761542ff117957df8afd",
+      "bytes": 2428
+    },
+    {
+      "path": "scripts/validate_active_plugin.py",
+      "sha256": "0ca8031f7284994fe4feb22f7d7b7abd814d2824ab414ace631e8457dad73a96",
+      "bytes": 7455
+    },
+    {
+      "path": "scripts/validate_distributions.py",
+      "sha256": "810f59cfe58d3c11a78e999a9296cbf90f351e5b5d2858075c8cb95a9f1ab62d",
+      "bytes": 15249
+    },
+    {
+      "path": "scripts/validate_repo.py",
+      "sha256": "5c09cd6b8f23021d87f76455d20bbbf671f474afb101f38ba65fad8a62b1f024",
+      "bytes": 18406
+    },
+    {
+      "path": "scripts/validate_study.py",
+      "sha256": "668e4b148999440374597e96b1c97ba4fc224ddb6fb9d750e8f56bb37e1687f6",
+      "bytes": 13457
+    },
+    {
+      "path": "skills/lca-autopilot/SKILL.md",
+      "sha256": "34dab46978bd86b00ccc7374fea4788da7094f075d38dc76ece7a0ec1184dc3c",
+      "bytes": 3875
+    },
+    {
+      "path": "skills/lca-autopilot/references/autonomy-policy.md",
+      "sha256": "eaa3e7763c3c2a030a7d113ea42a92ae8ef3194aab7587dab6f7ad70091dc116",
+      "bytes": 611
+    },
+    {
+      "path": "skills/lca-autopilot/references/child-skill-contract.md",
+      "sha256": "c6bc6a4ee6a5d4294529f338034da35ea0e0270e31f9f025b9a178377e83bc2e",
+      "bytes": 456
+    },
+    {
+      "path": "skills/lca-autopilot/references/pipeline.md",
+      "sha256": "51d8b5af7623104ae3dbe3804dc2f87f5a3c872f2d9a8cf9158f3524b851ca5b",
+      "bytes": 403
+    },
+    {
+      "path": "skills/lca-autopilot/references/stop-conditions.md",
+      "sha256": "526146dc6044345445faa6f4f220b692321ef446c36a82ec3a20c0bce49d7b6b",
+      "bytes": 682
+    },
+    {
+      "path": "skills/lca-brightway/SKILL.md",
+      "sha256": "03edb8873f81acb48bcb58fa5d9558882c3ff9bc6ee8eb35b3028e7024212f59",
+      "bytes": 3365
+    },
+    {
+      "path": "skills/lca-brightway/references/data-and-calculation.md",
+      "sha256": "6eaf6f8c8a46e3bb4c0fbb1b71d9c0c57016344d2c992a3fbef0e4e4d3bb3120",
+      "bytes": 1173
+    },
+    {
+      "path": "skills/lca-brightway/references/diagnostics.md",
+      "sha256": "9feeae1dcd01b3875e509fb73f840156307517784a33fc773dde0bbadec72d61",
+      "bytes": 1109
+    },
+    {
+      "path": "skills/lca-brightway/references/environment.md",
+      "sha256": "5be50a6563dd95b9027de75ad92b9065f3a579e46d19230b93f77ae70002c132",
+      "bytes": 993
+    },
+    {
+      "path": "skills/lca-brightway/references/scenarios-uncertainty.md",
+      "sha256": "4069f46ce80d78234cdeec5f126de665f60f219870d314d85c8f3a981df4c68a",
+      "bytes": 1193
+    },
+    {
+      "path": "skills/lca-brightway/scripts/snapshot_environment.py",
+      "sha256": "67b73aa8a6894088fc39b57ccd6879a73083860678b35d63ab9bd715a62a8f7a",
+      "bytes": 2712
+    },
+    {
+      "path": "skills/lca-calculate/SKILL.md",
+      "sha256": "026467eb3309e945bb968541fc3a6ff6038bce4a7fc25bdcb7b077a0d750df4d",
+      "bytes": 2701
+    },
+    {
+      "path": "skills/lca-calculate/references/calculation-contract.md",
+      "sha256": "ebba63e5b3d5cae9859cc991528acd18a0e7b9478e7f72c8822610300b943ccc",
+      "bytes": 689
+    },
+    {
+      "path": "skills/lca-calculate/references/result-reconciliation.md",
+      "sha256": "2199fb3bf3e03fbea06f81d029850854eef076f2723cec5f3d0806a65e66ff80",
+      "bytes": 657
+    },
+    {
+      "path": "skills/lca-calculate/references/tool-routing.md",
+      "sha256": "800e3cbc7a7bc32b1564cab0982969f8ac647646bf3cdaf2ac92a525882500e1",
+      "bytes": 710
+    },
+    {
+      "path": "skills/lca-compound/SKILL.md",
+      "sha256": "aabd25333a41d4469b6195f456cb0f8008fe93ae5f542301a80efd55c4363535",
+      "bytes": 2068
+    },
+    {
+      "path": "skills/lca-compound/references/solution-template.md",
+      "sha256": "9b6ae54e3377558942bc29eca10601c671d678fd682c622cc9ea876dc457c254",
+      "bytes": 477
+    },
+    {
+      "path": "skills/lca-data/SKILL.md",
+      "sha256": "f622e0c77430da9fc2d3a571a765eab525cba70f539bfe74a634241809c8b50f",
+      "bytes": 2964
+    },
+    {
+      "path": "skills/lca-data/references/current-errata.md",
+      "sha256": "34ab1fe0a3fb033ddf9cea6c894729cc2c85b98a873c017ca6ed780a4f1eadb0",
+      "bytes": 3605
+    },
+    {
+      "path": "skills/lca-data/references/database-catalog.md",
+      "sha256": "6f5be1b8286653eeefdf04b673dd8cce0b486a7edf21509e5cdddb8e91c1c651",
+      "bytes": 1499
+    },
+    {
+      "path": "skills/lca-data/references/dataset-fit.md",
+      "sha256": "d443f4316010df45403b8043b40e3bab9d9b71890c8888f7b41cc1d33528c14d",
+      "bytes": 1186
+    },
+    {
+      "path": "skills/lca-data/references/interoperability.md",
+      "sha256": "8aa524409f3204674e8b21f0e800145933e9e81dd3b0140de7632a7073180802",
+      "bytes": 1578
+    },
+    {
+      "path": "skills/lca-data/references/licensing.md",
+      "sha256": "57162ae937d90bcb7179787899fdb23912af51048d198b8d147b271fda1ec339",
+      "bytes": 1311
+    },
+    {
+      "path": "skills/lca-debug/SKILL.md",
+      "sha256": "583ec60f8cf46349b0f52fe457b36db4f64d4fd51f8a3ad0ee50d64c06b712c7",
+      "bytes": 2444
+    },
+    {
+      "path": "skills/lca-debug/references/debug-playbook.md",
+      "sha256": "30b15d1c0ea561c2e3c90a3459434fdfe2f07fed8d03b08ccaaa6f6253d2fdcf",
+      "bytes": 590
+    },
+    {
+      "path": "skills/lca-debug/references/failure-taxonomy.md",
+      "sha256": "d43990588b7eb280a8e7ca8da04486a7e9cff83af51a510638166fd25c056172",
+      "bytes": 932
+    },
+    {
+      "path": "skills/lca-debug/references/minimal-reproduction.md",
+      "sha256": "a025cd6d9ee9fcc2e05ef3a6a2b9c0261002f7d579f85eb908d236bddc1b4926",
+      "bytes": 543
+    },
+    {
+      "path": "skills/lca-doctor/SKILL.md",
+      "sha256": "2109057633b44f9224b0f566951ebe282c8a46c4f1a9cc585e3fe7d80c0b0336",
+      "bytes": 2005
+    },
+    {
+      "path": "skills/lca-doctor/references/diagnostic-matrix.md",
+      "sha256": "5ac3e41f948ddbc46ad20ee3273ff238c8fcc45af6072444156b61b8f3a66b65",
+      "bytes": 908
+    },
+    {
+      "path": "skills/lca-doctor/references/host-commands.md",
+      "sha256": "c9869b62bef02cf720e544ea532ef27e58b9d7dcea81221023402aa996b5d75a",
+      "bytes": 816
+    },
+    {
+      "path": "skills/lca-epd-pcf/SKILL.md",
+      "sha256": "6183d170927e786f7aed769f2575918450a77a1e743bc644e6f69969039dc27d",
+      "bytes": 2831
+    },
+    {
+      "path": "skills/lca-epd-pcf/references/claims-comparability.md",
+      "sha256": "41699c2cbf6117d2e50e6aa0d77ef7aec733120a3f66ca057563bb7e19e44207",
+      "bytes": 1689
+    },
+    {
+      "path": "skills/lca-epd-pcf/references/context-selection.md",
+      "sha256": "a2e388129e5fa39bc2a55dad9235d8d1301c1bf0526ae997f3ce014fd11d2170",
+      "bytes": 1861
+    },
+    {
+      "path": "skills/lca-epd-pcf/references/rule-matrix.md",
+      "sha256": "3510d59370072d739d7eb0b2009a5c3eca33d872b882b093ea9376bdf2e5d116",
+      "bytes": 1628
+    },
+    {
+      "path": "skills/lca-expert/SKILL.md",
+      "sha256": "48c714a8c90dc84bddd849b701e9fdfda7ffd6aaf590260c913c4e3e5732bf74",
+      "bytes": 7033
+    },
+    {
+      "path": "skills/lca-expert/references/evidence-policy.md",
+      "sha256": "d77f2fa45aa49c73c7349f8446823db460c38b2db05574a3a7b3834bbf3be473",
+      "bytes": 1564
+    },
+    {
+      "path": "skills/lca-expert/references/expert-reasoning.md",
+      "sha256": "fb5d7288bdb28d0eebe503531778c990e7c39ea59062df365375e97a8c1cd7f8",
+      "bytes": 3260
+    },
+    {
+      "path": "skills/lca-expert/references/failure-modes.md",
+      "sha256": "28af5b0024e1b17bc5729fbaf71e633a2f44b35f31d986020b304f8f206fa82d",
+      "bytes": 2463
+    },
+    {
+      "path": "skills/lca-expert/references/output-contracts.md",
+      "sha256": "71f464c7204a3873ee265ca296fd3906246a079b502014e8a7e62643298391f0",
+      "bytes": 1110
+    },
+    {
+      "path": "skills/lca-expert/references/quality-gates.md",
+      "sha256": "a63b2163c1bcf6b4be613426261416b285469c1e7d4e87cb390631b378151190",
+      "bytes": 2604
+    },
+    {
+      "path": "skills/lca-expert/references/routing.md",
+      "sha256": "299c5815bc8935169061c5e031b6b980eeae29b121914b3d26717a5dfb703685",
+      "bytes": 2138
+    },
+    {
+      "path": "skills/lca-greet/SKILL.md",
+      "sha256": "6c493fae1ffa3a5461134325bec516ab95b446a39b1d50e169e2a26f1e8090a8",
+      "bytes": 3334
+    },
+    {
+      "path": "skills/lca-greet/references/automation.md",
+      "sha256": "71c8bcba03c98cb1050fa47acffd42949bb8631e5a2fbc8cd185f6b7a4bc09b6",
+      "bytes": 1014
+    },
+    {
+      "path": "skills/lca-greet/references/model-and-boundaries.md",
+      "sha256": "749bb6bc20bdab5ef476a9edc6f3c7bb6645a3c0bf041bb8c14b5a73ef37be20",
+      "bytes": 1065
+    },
+    {
+      "path": "skills/lca-greet/references/pathway-workflow.md",
+      "sha256": "94b3f6899ff7c69b3ac099b606f124b5f6bb30fb4fd6e88b96a731781a9743dc",
+      "bytes": 818
+    },
+    {
+      "path": "skills/lca-greet/references/troubleshooting.md",
+      "sha256": "3216c715a7ef18689c673e0f7ef794edad86804f38bc26a15914f00ea52d8c05",
+      "bytes": 842
+    },
+    {
+      "path": "skills/lca-greet/references/version-provenance.md",
+      "sha256": "dd6d4ab6b4015919a5c9194940e86e2885ebad4c7219bbf7ef2e68c3d544576c",
+      "bytes": 596
+    },
+    {
+      "path": "skills/lca-greet/scripts/build_run_manifest.py",
+      "sha256": "2f74b90c7a441f6c870f0a19895819b1eedae857a0156eb2563e194fbdb60d0f",
+      "bytes": 3107
+    },
+    {
+      "path": "skills/lca-handoff/SKILL.md",
+      "sha256": "6ad6a80f907a6e8acc262405e28858a3b2b9d025bb7f4ca381965157343f81b6",
+      "bytes": 1877
+    },
+    {
+      "path": "skills/lca-handoff/references/handoff-contract.md",
+      "sha256": "349a942f8063d1094f167d067c1d0e53c98105cb8a1f50e570c67eb89f805651",
+      "bytes": 497
+    },
+    {
+      "path": "skills/lca-handoff/references/resume-protocol.md",
+      "sha256": "c7b1d46162e48d7b78f07eafb7e50d11ea8295c859d1cbcb961d5f0b91758379",
+      "bytes": 526
+    },
+    {
+      "path": "skills/lca-impact/SKILL.md",
+      "sha256": "a8fe5a168c40792a6cd3b56802eed1cbe136fa1c42ef0bfec6060ea87f0e76f6",
+      "bytes": 3053
+    },
+    {
+      "path": "skills/lca-impact/references/climate-and-carbon.md",
+      "sha256": "56dfdbfc9fa6eef092f82ea6a3ce5709413e1d87a19f06989c36de015c48687f",
+      "bytes": 1530
+    },
+    {
+      "path": "skills/lca-impact/references/method-catalog.md",
+      "sha256": "6811fe915a05aa9ba2b9ac834faf4ad795c61d6fe3455ac1b9adbbebc5ab9ee4",
+      "bytes": 1740
+    },
+    {
+      "path": "skills/lca-impact/references/method-selection.md",
+      "sha256": "336242292ca9e28c7379ae3524b015e2d95cf41a6a30bc2180eb6ba665aa2ca4",
+      "bytes": 1404
+    },
+    {
+      "path": "skills/lca-impact/references/normalization-weighting.md",
+      "sha256": "bc80c31f7ffba244ef4570e57dbbd44ace12688d7e0c492464b2cbccb7d8b55b",
+      "bytes": 1077
+    },
+    {
+      "path": "skills/lca-impact/references/water-land-toxicity.md",
+      "sha256": "abda5e974e89fe6e5f4678bc60a539cfdf96e2088178cc988630919117f1dc3b",
+      "bytes": 1255
+    },
+    {
+      "path": "skills/lca-intake/SKILL.md",
+      "sha256": "70ca48690e45a24538caf0bea6bd6a45d37b0d44f8feec6c30588ffcab654cc7",
+      "bytes": 2521
+    },
+    {
+      "path": "skills/lca-intake/references/intake-question-tree.md",
+      "sha256": "24a3bc6855d7e7bfa11b762a0c8b5c34240d14580ce5bd85fca17561a530567a",
+      "bytes": 1437
+    },
+    {
+      "path": "skills/lca-intake/references/minimum-brief.md",
+      "sha256": "42c273db58770f25fcf084cca15767b416daf61173b76373bb4075cb37d5ac54",
+      "bytes": 659
+    },
+    {
+      "path": "skills/lca-intake/references/study-classification.md",
+      "sha256": "e3ae455df98fd7dc169a0c08746cd4985dcc4b58edd097f98a4deb9cfc672366",
+      "bytes": 1309
+    },
+    {
+      "path": "skills/lca-interpret/SKILL.md",
+      "sha256": "62f2e2487ac5881667ad66d0237f552d0290b1df7d8b0f5e865d639ca61693ab",
+      "bytes": 3037
+    },
+    {
+      "path": "skills/lca-interpret/references/contribution-analysis.md",
+      "sha256": "6c555b2676e1a35ea8629c168fcb4fd0004b36b7a4d66729508d197b4c85fd4d",
+      "bytes": 1109
+    },
+    {
+      "path": "skills/lca-interpret/references/interpretation-checks.md",
+      "sha256": "fca0a5225918b89fb724ba4d06a0f2ffca7b9e4d325c75695cf8f1c51ae46676",
+      "bytes": 1075
+    },
+    {
+      "path": "skills/lca-interpret/references/sensitivity-scenarios.md",
+      "sha256": "326e409fd3977843aec07cf4a2062a156ea785279b97a691f21f51268be619df",
+      "bytes": 1192
+    },
+    {
+      "path": "skills/lca-interpret/references/uncertainty.md",
+      "sha256": "87d4458f67282ae6490e02729afe2840818c346a0069d08009b920c790c5fa75",
+      "bytes": 1391
+    },
+    {
+      "path": "skills/lca-inventory/SKILL.md",
+      "sha256": "886fe40bb26e426c3dabf35cc2318e52b7b418e5b8be36b9b1401b47576ca06c",
+      "bytes": 4031
+    },
+    {
+      "path": "skills/lca-inventory/references/balances.md",
+      "sha256": "c62546a15e7f24e41e81bdb58433358a559eec550361f962ec6c261fa9dbc2b3",
+      "bytes": 1491
+    },
+    {
+      "path": "skills/lca-inventory/references/direct-emissions.md",
+      "sha256": "bd50b2a4f5a77ba0304d35787d596911b677fcee25e335b3df216e5708292482",
+      "bytes": 1410
+    },
+    {
+      "path": "skills/lca-inventory/references/engineering-modeling.md",
+      "sha256": "cfb58ed8dadc4f8c95187bc29949a2ac9a908522af7d01d1d5d49cc12abf6ab2",
+      "bytes": 1585
+    },
+    {
+      "path": "skills/lca-inventory/references/foreground-background.md",
+      "sha256": "f215430090a6169d348a253671a70419ac78af395c94618d78a42a50c1addd72",
+      "bytes": 1356
+    },
+    {
+      "path": "skills/lca-inventory/references/inventory-audit.md",
+      "sha256": "fff8fc3ab3327d676aaa8ab3007ffd8f61b6db0b98540354f26b7d2bede90989",
+      "bytes": 1485
+    },
+    {
+      "path": "skills/lca-inventory/references/uncertainty-parameters.md",
+      "sha256": "13042cf007b012079bd2faad4d4f0470c360ffb606b6e7daeb425823fe04ba16",
+      "bytes": 1287
+    },
+    {
+      "path": "skills/lca-openlca/SKILL.md",
+      "sha256": "f1456a4a22a0ab71efeec21b6296a943b6808112753a5fada3e746f0af2b3d8c",
+      "bytes": 3996
+    },
+    {
+      "path": "skills/lca-openlca/references/calculation-analysis.md",
+      "sha256": "61ef1aacc65697b4e25bb1d3dfa88287c18fcfa81232b659a9c1c34d37d7294a",
+      "bytes": 1211
+    },
+    {
+      "path": "skills/lca-openlca/references/gui-workflow.md",
+      "sha256": "cdb4179c6af2c2505fa0c41ab7b31241bbd6368c4a903dfd3c327820e798c1e5",
+      "bytes": 1308
+    },
+    {
+      "path": "skills/lca-openlca/references/import-export.md",
+      "sha256": "5c9f0f1074166f8adde0e61adb2e039b8a0bb178dfbbde9e33f09fc8c72930de",
+      "bytes": 1111
+    },
+    {
+      "path": "skills/lca-openlca/references/ipc-workflow.md",
+      "sha256": "ee63dd18dc4a4c466744fdd326b698dce2a812765e9bcbb67a34087c5de57a48",
+      "bytes": 6342
+    },
+    {
+      "path": "skills/lca-openlca/references/troubleshooting.md",
+      "sha256": "7f2e40833057e7521168e7e83f5f16aede6736a673dfd3e769448e3c5c0cfca6",
+      "bytes": 1034
+    },
+    {
+      "path": "skills/lca-openlca/scripts/snapshot_environment.py",
+      "sha256": "787cf1f5d0243e4479d817948eccd7770a5aa0bca2e123267240fdc9b7b5797d",
+      "bytes": 3853
+    },
+    {
+      "path": "skills/lca-organization-social/SKILL.md",
+      "sha256": "b79744f5d91a8e066b09661a0fea4ed94c8ddc0aaa560f3f4ddd9a209defe2a9",
+      "bytes": 2554
+    },
+    {
+      "path": "skills/lca-organization-social/references/organizational-lca.md",
+      "sha256": "1b5a6e3cf5bd076cfb1ae52ece7501467c7922d7b22a24d48ddefa86e61c5708",
+      "bytes": 1559
+    },
+    {
+      "path": "skills/lca-organization-social/references/social-lca.md",
+      "sha256": "6a096756538d2924976fb02b1014ae043add8b3f362a9964fb363df1e1016350",
+      "bytes": 1540
+    },
+    {
+      "path": "skills/lca-plan/SKILL.md",
+      "sha256": "976d203827d43b86621587569ccb085600f7311c5630608fd1aa7d0f0c6380d9",
+      "bytes": 2405
+    },
+    {
+      "path": "skills/lca-plan/references/gate-dependencies.md",
+      "sha256": "b6048b4016158dd8e4d8e73913f931ed93b1011a6860118fa2062dc2c799d88e",
+      "bytes": 622
+    },
+    {
+      "path": "skills/lca-plan/references/plan-schema.md",
+      "sha256": "2530d4967babd57b9ed3c592b5e89aa8a6b4fdfc4dbffcd1b985d903b9a810f4",
+      "bytes": 545
+    },
+    {
+      "path": "skills/lca-plan/references/risk-routing.md",
+      "sha256": "117260d46cb850881c162a6080bb97eafd442903587aa771534ab86df7d39dcd",
+      "bytes": 686
+    },
+    {
+      "path": "skills/lca-prospective/SKILL.md",
+      "sha256": "a32a3fd45d5e25bb284c3f54221039f0cf7549534efc4ff52cf841933cab0dcd",
+      "bytes": 2905
+    },
+    {
+      "path": "skills/lca-prospective/references/approach-selection.md",
+      "sha256": "50cde843188c9f2031b65913ec4a1ae2d2f7b3f51561ebca11db96cedddc1a6b",
+      "bytes": 2247
+    },
+    {
+      "path": "skills/lca-prospective/references/consequential.md",
+      "sha256": "c3f07a11b84988d37ae3122beebc3af0d4011c2cc9aefefb2adbaf168b3272b0",
+      "bytes": 1731
+    },
+    {
+      "path": "skills/lca-prospective/references/scenario-design.md",
+      "sha256": "df873666aa8ca234a18bc76695fa365439b42a6a37e1e66a2323678dc020c179",
+      "bytes": 1534
+    },
+    {
+      "path": "skills/lca-prospective/references/technology-scaleup.md",
+      "sha256": "ff1c3ea1471344c704513691c023324011606fe8ff108cd2a4c07e2a7484830b",
+      "bytes": 2182
+    },
+    {
+      "path": "skills/lca-report/SKILL.md",
+      "sha256": "97a8619e0dbf431ba67d8a45bd98b1710e52b60cb22b673d7e4c908c3be61e10",
+      "bytes": 2874
+    },
+    {
+      "path": "skills/lca-report/references/claims-and-visuals.md",
+      "sha256": "cf3ba78fc6295923a639cd3225093754ad4bd9ec9fc5ba0c996e10421329465b",
+      "bytes": 1031
+    },
+    {
+      "path": "skills/lca-report/references/release-manifest.md",
+      "sha256": "0f753d5e6654b7d668a855ab93135e582a2ee20b1aa2badb9ea7c6043419f5f6",
+      "bytes": 925
+    },
+    {
+      "path": "skills/lca-report/references/report-content.md",
+      "sha256": "418f8e1347111c00ce5ebbc6446ffdcd1f9b907fe8b3f649b558a2eb1c0a5a3b",
+      "bytes": 1023
+    },
+    {
+      "path": "skills/lca-report/references/report-types.md",
+      "sha256": "6db403251dcb22f089d2fe2064834a5f53718a53b448828fa5481cb8bf9c17b4",
+      "bytes": 927
+    },
+    {
+      "path": "skills/lca-research/SKILL.md",
+      "sha256": "3d7e9768a27942980608d3f2c3d23408c9eb21bb097947dd1d57f8c965fedcaa",
+      "bytes": 2450
+    },
+    {
+      "path": "skills/lca-research/references/data-extraction.md",
+      "sha256": "273f3ac43cfa86c4abc1f0b0d53e8dce250eb31ae07aaffd43406c88b7c94f70",
+      "bytes": 1390
+    },
+    {
+      "path": "skills/lca-research/references/evidence-hierarchy.md",
+      "sha256": "5397e50e52768b103fa649e5d01249f6924bb3e77b9f54d6432676b537512f86",
+      "bytes": 1303
+    },
+    {
+      "path": "skills/lca-research/references/source-evaluation.md",
+      "sha256": "6a04da999a7aa762d2c2be0bcd6b73862fa834dc58c733ffda87c888e02d645c",
+      "bytes": 1242
+    },
+    {
+      "path": "skills/lca-review/SKILL.md",
+      "sha256": "7895b6f06fe9dee81f4cc4fa34d0387cdf3016a735163d22e788b44570cead7e",
+      "bytes": 3230
+    },
+    {
+      "path": "skills/lca-review/references/comparative-assertions.md",
+      "sha256": "80320e7237c69e8754fad94a8345c59b990311ee54f76a5747eddef615497cd8",
+      "bytes": 983
+    },
+    {
+      "path": "skills/lca-review/references/finding-schema.md",
+      "sha256": "6e501e0ca4aef8b4717cc4c2657ec6e54ea622f384a161d83d926f287d693f9b",
+      "bytes": 616
+    },
+    {
+      "path": "skills/lca-review/references/model-audit.md",
+      "sha256": "11ee4d87714314bccaf62f03bfbe22c86a0421cd764d69532b615e026eb11d30",
+      "bytes": 1004
+    },
+    {
+      "path": "skills/lca-review/references/persona-claims-reviewer.md",
+      "sha256": "9116eae3e91482789b5def1e9f9d3d00d2099b08650b618347061ae5f817fbac",
+      "bytes": 775
+    },
+    {
+      "path": "skills/lca-review/references/persona-critical-reviewer.md",
+      "sha256": "712609122f231986bb97a3f1ea115fdea50b81addea341b207c945693d68c84b",
+      "bytes": 783
+    },
+    {
+      "path": "skills/lca-review/references/persona-data-auditor.md",
+      "sha256": "ced777b284b3fb77fcc6e0a2ad3ff86959a6acba3a93957963f5b33f66dcbc29",
+      "bytes": 773
+    },
+    {
+      "path": "skills/lca-review/references/persona-lcia-specialist.md",
+      "sha256": "279700c8924c24a92000063c6c7f644c1b7ac8c657466cf2de98c0194da8823c",
+      "bytes": 770
+    },
+    {
+      "path": "skills/lca-review/references/persona-methodologist.md",
+      "sha256": "fe1779d8d243e78baa332976a23b06a689f8d335b6f6c44df8ae56d0acfa4816",
+      "bytes": 797
+    },
+    {
+      "path": "skills/lca-review/references/persona-process-engineer.md",
+      "sha256": "e884c70b4eceb8dcdd96007ea74855a616adf097950f861074af2aae6c2111a9",
+      "bytes": 775
+    },
+    {
+      "path": "skills/lca-review/references/persona-sector-specialist.md",
+      "sha256": "c124dcb50c29eba197ef0af3aa158f30fb5bda8c84e47a1051bfc11f46e7422a",
+      "bytes": 755
+    },
+    {
+      "path": "skills/lca-review/references/persona-tool-integration.md",
+      "sha256": "bed94df75ccef42134a230444a946002bc5830231a277fbf84a410f8cf72756d",
+      "bytes": 794
+    },
+    {
+      "path": "skills/lca-review/references/persona-uncertainty-specialist.md",
+      "sha256": "19e6739983f14262cf552707091d55dca5a368cdf67166e5239caf2f78a0b6dd",
+      "bytes": 779
+    },
+    {
+      "path": "skills/lca-review/references/report-audit.md",
+      "sha256": "0561d15aa8a0c1e3767be97243e88c4e98adaa13539ccb5bd8b4c719fd52f51a",
+      "bytes": 895
+    },
+    {
+      "path": "skills/lca-review/references/results-audit.md",
+      "sha256": "e4c4e25143c2c154446c036d94937d117bbb9ac060a98bedb6cad53756510114",
+      "bytes": 720
+    },
+    {
+      "path": "skills/lca-review/references/review-orchestration.md",
+      "sha256": "963d98e81cd5ff8682e3df7c59fd27e4c59ebc12336cf0fa1085abd47826c5f9",
+      "bytes": 1033
+    },
+    {
+      "path": "skills/lca-review/references/review-plan.md",
+      "sha256": "a7010170b2928ea14672d82f75c25d05f304c5f085d9b56661f74c907a4ece0e",
+      "bytes": 724
+    },
+    {
+      "path": "skills/lca-review/references/scope-audit.md",
+      "sha256": "50a191c2ade653499ae3f784cd8381e8888e581729350f997a6fb8ff6c2a68b1",
+      "bytes": 740
+    },
+    {
+      "path": "skills/lca-scope/SKILL.md",
+      "sha256": "23bd52622c1153f2346525fa98095b4c9ad2e3fcc81b1d510d631c70a1013571",
+      "bytes": 3517
+    },
+    {
+      "path": "skills/lca-scope/references/data-quality.md",
+      "sha256": "8b02ffc760c51d28aba10c4d0783d1ecbc2982189d170a9a2c7b1f1472f0bb7a",
+      "bytes": 1283
+    },
+    {
+      "path": "skills/lca-scope/references/functional-unit.md",
+      "sha256": "a2a92a111e9eb987ca40ba896633c03796171dc56d4317cc5728a83906df30c4",
+      "bytes": 1830
+    },
+    {
+      "path": "skills/lca-scope/references/goal-and-scope.md",
+      "sha256": "c89db5e3768ab1475ffb6581952d389a14fd64d8fc92e09717dd71c400d7cd59",
+      "bytes": 1370
+    },
+    {
+      "path": "skills/lca-scope/references/modeling-approach.md",
+      "sha256": "b356048c5b0e87d78dd7972253c965a5e3d12bf551f9ca735ed69483c3de57f2",
+      "bytes": 1639
+    },
+    {
+      "path": "skills/lca-scope/references/multifunctionality-recycling.md",
+      "sha256": "7e9c17b8aae477d40b7d78e08aad4f06f44dfa6bd9f398920a0b801ed03ca375",
+      "bytes": 1750
+    },
+    {
+      "path": "skills/lca-scope/references/system-boundary.md",
+      "sha256": "e03a49e20d1c2d2e3ca6181a57671235b165793f1152f7f915ab60c01c3e1900",
+      "bytes": 1500
+    },
+    {
+      "path": "skills/lca-sector/SKILL.md",
+      "sha256": "b01bf2e9104cbf497df2fc133d9a2a732bb0f53168effc1bf9410ed8d6497c75",
+      "bytes": 2640
+    },
+    {
+      "path": "skills/lca-sector/references/agriculture-food.md",
+      "sha256": "a936a2fb72f1a0164baac9d3f541498b162df088d2649e51fe306308dde3b29e",
+      "bytes": 1609
+    },
+    {
+      "path": "skills/lca-sector/references/buildings-construction.md",
+      "sha256": "82112bdabc6c2d4c46a86c4dd2d1092b20e804a3f8c901af94d7a8fea40cc481",
+      "bytes": 1483
+    },
+    {
+      "path": "skills/lca-sector/references/chemicals-bioprocesses.md",
+      "sha256": "9f6971128035e3a9ade91282a25fcb67497148fc7634959c3b3619aa1cb53b04",
+      "bytes": 1930
+    },
+    {
+      "path": "skills/lca-sector/references/energy-fuels.md",
+      "sha256": "0ad09b9626a765b9e3698caac0f819fc22a6fca7fa0a7b01344ab1fc472103bf",
+      "bytes": 1733
+    },
+    {
+      "path": "skills/lca-sector/references/manufacturing-electronics.md",
+      "sha256": "62af8af57992d1d32c913a4f432aa16f6e5813f8c70c141abd42c45874e9b27b",
+      "bytes": 1580
+    },
+    {
+      "path": "skills/lca-sector/references/materials-batteries.md",
+      "sha256": "9b81174b8cf396d1356450861ff0e8df76df77f7c4d300f2e580844181e5c9db",
+      "bytes": 1729
+    },
+    {
+      "path": "skills/lca-sector/references/transport.md",
+      "sha256": "bd0d1456d9a296ae965e99a7d5a7e39f331ec3f5e75e84ce3254a4caf785ae96",
+      "bytes": 1437
+    },
+    {
+      "path": "skills/lca-sector/references/waste-circularity.md",
+      "sha256": "f1d510fdbb28f7dbb60286af839d723ceb32a1dc4e1ac4b4c81b5d071ded8e8e",
+      "bytes": 1600
+    },
+    {
+      "path": "skills/lca-sector/references/water-systems.md",
+      "sha256": "f189abbb607bc0bf495f1f35278173f96ecf28e3a93deab5342707c32d1ee5b0",
+      "bytes": 1482
+    },
+    {
+      "path": "skills/lca-setup/SKILL.md",
+      "sha256": "b0e42a7f5047b3d2af9e3c5fca55f938463b8081fc3ce01dadcf4b73e283e6f3",
+      "bytes": 2427
+    },
+    {
+      "path": "skills/lca-setup/references/workspace-contract.md",
+      "sha256": "f6b916ee96dacbff1d717739d46d34452112850f920a787428dc60ac84248906",
+      "bytes": 1373
+    },
+    {
+      "path": "skills/lca-simplify/SKILL.md",
+      "sha256": "b7a9542ee4acbe1a07f4e5c152fc69172d4be6580b64c46c3c6b884d907ecb3d",
+      "bytes": 1933
+    },
+    {
+      "path": "skills/lca-simplify/references/complexity-budget.md",
+      "sha256": "c934db5c187552c6f5ec0310a491047babfc28f7b4bb18166b1d731f28e00526",
+      "bytes": 480
+    },
+    {
+      "path": "skills/lca-simplify/references/model-reduction.md",
+      "sha256": "caf0299223483565b6802e24601e371473d7b6f41a07cc3a4eb34c273167b827",
+      "bytes": 656
+    },
+    {
+      "path": "skills/lca-validate/SKILL.md",
+      "sha256": "21270c574274df8e268d9b7d73050693395b2b10e6f98fea3662d46eaecda382",
+      "bytes": 2266
+    },
+    {
+      "path": "skills/lca-validate/references/exception-waivers.md",
+      "sha256": "613500d2513b9fdb8528ab3edf251e4347f36b494a5ad9d52de5aa6570f1b583",
+      "bytes": 520
+    },
+    {
+      "path": "skills/lca-validate/references/release-gates.md",
+      "sha256": "e11b4b37da8f686944ee6e50e3b624cd7c32953c3929bbfa9840b3b68bd8da44",
+      "bytes": 576
+    },
+    {
+      "path": "skills/lca-validate/references/validation-matrix.md",
+      "sha256": "73e019fc6353a696f7d7f9df82539e66951f23c39f256a2a6b1723789762163f",
+      "bytes": 840
+    },
+    {
+      "path": "skills/lca-work/SKILL.md",
+      "sha256": "53e3624753f22bd7cd7933a98e5e32f4203d381255fe423f2648a1a25b99681d",
+      "bytes": 2294
+    },
+    {
+      "path": "skills/lca-work/references/change-control.md",
+      "sha256": "24370b4483ddabea7b5565a85cffa1496ca162ac3196f1ad188a80c567a36a8d",
+      "bytes": 615
+    },
+    {
+      "path": "skills/lca-work/references/return-to-caller.md",
+      "sha256": "d15fd3750226d561dc574e399843cd024c7d80c534da7041c659efb325c5a21a",
+      "bytes": 508
+    },
+    {
+      "path": "skills/lca-work/references/work-receipt.md",
+      "sha256": "ac4d6577a53dabd5cf0e36dce1c2fef3f53c32dccc98ccd90d87d757f1ad5a4f",
+      "bytes": 564
+    },
+    {
+      "path": "tests/evals/README.md",
+      "sha256": "d137f83c1db9be1345f3c531a2031cce41161cab72e8184dcaf79cce5d3d3ab8",
+      "bytes": 1757
+    },
+    {
+      "path": "tests/evals/cases/e001-functional-unit-is-mass,-but-alternatives-provide-different-service-li.yaml",
+      "sha256": "d7d53e95eff620b73cb2021bf5151e2c03251e018477d239d6e74ccc6f441b02",
+      "bytes": 1050
+    },
+    {
+      "path": "tests/evals/cases/e002-public-comparison-with-non-equivalent-battery-performance.yaml",
+      "sha256": "00e87ce8adfa8ccf5cf2683991319d15d3a468f9ba97df29f03660a69dc4b402",
+      "bytes": 1004
+    },
+    {
+      "path": "tests/evals/cases/e003-recycled-content-and-end-of-life-avoided-burden-double-counting.yaml",
+      "sha256": "1f9cb95731f578bef18d5d873f6b9a2b99cb5a6266f33e0013caf4608da88317",
+      "bytes": 962
+    },
+    {
+      "path": "tests/evals/cases/e004-negative-carbon-footprint-dominated-by-a-co-product-credit.yaml",
+      "sha256": "274839eae73c6dffb4a879a9377c89f4e160f86a0973f74f271b1907fad518f2",
+      "bytes": 1058
+    },
+    {
+      "path": "tests/evals/cases/e005-biogenic-carbon-storage-and-delayed-release-in-wood-product.yaml",
+      "sha256": "e698884f69b07909447abe9e24ddf4f1fc0e80f53a1ae8833203b6c307350830",
+      "bytes": 1010
+    },
+    {
+      "path": "tests/evals/cases/e006-foreground-process-violates-carbon-and-mass-closure.yaml",
+      "sha256": "83b76e8007adf30e2e40f6b4c5a9b1f81f7d618114b37fb4362c8db8bbc6a3d0",
+      "bytes": 893
+    },
+    {
+      "path": "tests/evals/cases/e007-openlca-allocation-factors-not-refreshed-after-product-changes.yaml",
+      "sha256": "5937b864e7587be733efa0e3deba9da795b7977c8c064d1c07eebf61a69e39d7",
+      "bytes": 929
+    },
+    {
+      "path": "tests/evals/cases/e008-brightway-legacy-tutorial-and-mutable-project-risk.yaml",
+      "sha256": "faec1ded91d3ab798ab7dc40cb5c9e8a83aba4763e760229e55ea38c2694624f",
+      "bytes": 905
+    },
+    {
+      "path": "tests/evals/cases/e009-greet-pathway-release-and-boundary-mismatch.yaml",
+      "sha256": "71bc1ed9c088134840a015373eb8a89cef4c572741b682b06d744de7065add2e",
+      "bytes": 911
+    },
+    {
+      "path": "tests/evals/cases/e010-silent-lcia-method-mixing.yaml",
+      "sha256": "cfddb72f4c7bc7126cba93a578e38253ab2f369e927b0c684db66a7aaedf40f8",
+      "bytes": 991
+    },
+    {
+      "path": "tests/evals/cases/e011-pef-study-during-limited-ef-compliant-dataset-availability.yaml",
+      "sha256": "afa99650addb67553313aabdda183a0fe8a0eb1142ecbf7d973fe494c2e3ddeb",
+      "bytes": 926
+    },
+    {
+      "path": "tests/evals/cases/e012-epd-work-cites-withdrawn-iso-14025-edition.yaml",
+      "sha256": "3627d04d61b8b05378210e2c036555c0fd2a683ad7dc0d00b993fa9199d53c93",
+      "bytes": 818
+    },
+    {
+      "path": "tests/evals/cases/e013-consequential-lca-uses-average-suppliers.yaml",
+      "sha256": "b375a881022eec281778eeb672858504b741acb553cf345aec6e6137b7b937a0",
+      "bytes": 1005
+    },
+    {
+      "path": "tests/evals/cases/e014-prospective-scale-up-of-low-trl-chemical-process.yaml",
+      "sha256": "5296d4c6f71b5179fcc1b1f366bddebb174838b00e9fd728cc1a2f7c17c6a5be",
+      "bytes": 972
+    },
+    {
+      "path": "tests/evals/cases/e015-water-withdrawal-reported-as-water-footprint.yaml",
+      "sha256": "e112841dd6b211990c9839ae773622e2a4f7f1bdd526221b3395d8a37bc54c7f",
+      "bytes": 846
+    },
+    {
+      "path": "tests/evals/cases/e016-toxicity-result-driven-by-unmapped-chemical-synonyms.yaml",
+      "sha256": "a49855bf9bffa2052765b4694cb7e361bcb496757024096b0393d512afdd0434",
+      "bytes": 948
+    },
+    {
+      "path": "tests/evals/cases/e017-battery-manufacturing-hotspot-ignores-lifetime-throughput.yaml",
+      "sha256": "bd33878e7eb1520547ea43cbfd2bf1910da18edbdd7cc413476e7569b4e53e78",
+      "bytes": 896
+    },
+    {
+      "path": "tests/evals/cases/e018-construction-module-d-and-recycled-content-credit-overlap.yaml",
+      "sha256": "61eea22aa82f97aed6a0b18cdbe3c4445f7fa7035ead2c320b5aae97b32d4b35",
+      "bytes": 983
+    },
+    {
+      "path": "tests/evals/cases/e019-agricultural-co-products,-soil-carbon,-and-land-use-change.yaml",
+      "sha256": "5d261244f8e55c619d4bd6bdace02acaa8e464b9200868a6a4f197ed814dd878",
+      "bytes": 970
+    },
+    {
+      "path": "tests/evals/cases/e020-spend-based-eeio-factor-presented-as-plant-specific-inventory.yaml",
+      "sha256": "a738f30814b5b23c31e354298f2ce96a0df69c0f6aedbe2238a00c46dc0c1a49",
+      "bytes": 896
+    },
+    {
+      "path": "tests/evals/cases/e021-monte-carlo-samples-correlated-parameters-independently.yaml",
+      "sha256": "201b1178d9812ef5facfe434f17186b2445839021d25e63e0f5ecef751551a32",
+      "bytes": 916
+    },
+    {
+      "path": "tests/evals/cases/e022-licensed-database-rows-requested-for-public-repository.yaml",
+      "sha256": "2f49517713c6128c6ff6d133b3b705b8f57b066c7e2be0876bc0b20b7ac1345a",
+      "bytes": 834
+    },
+    {
+      "path": "tests/evals/cases/e023-carbon-neutral-claim-hides-offsets.yaml",
+      "sha256": "a23d1a7d1758909335a280d9ac447efa45617ef1cf6b03dde06fa068b96037b7",
+      "bytes": 863
+    },
+    {
+      "path": "tests/evals/cases/e024-critical-review-self-attestation-for-public-assertion.yaml",
+      "sha256": "757a7a06c3b0ea153483731b129688d8cf1f135492cc1cfd3fd5bab7e4180b89",
+      "bytes": 934
+    },
+    {
+      "path": "tests/evals/cases/e025-temporal-electricity-profile-replaced-by-annual-average.yaml",
+      "sha256": "638080e5d5486f87a502cb9f7a2753896c2f2b2ea8c0b3981b3bfa3e91c9d432",
+      "bytes": 936
+    },
+    {
+      "path": "tests/evals/cases/e026-waste-incineration-export-credit-ignores-treatment-function.yaml",
+      "sha256": "718a7f91308e3cfcf69dc3f0632547033fdb549c3eb8067af43cc27a9612efeb",
+      "bytes": 945
+    },
+    {
+      "path": "tests/evals/cases/e027-supplier-epds-treated-as-directly-comparable-datasets.yaml",
+      "sha256": "029b764c416b7413c555f2aabf382dfa0092819bde67f25a2c77578443da5c5d",
+      "bytes": 901
+    },
+    {
+      "path": "tests/evals/cases/e028-zero-contribution-caused-by-unlinked-providers.yaml",
+      "sha256": "d3849c257fbf901f0d2ebc69f8430f87b9451f4c952c23ab843fa76c1618bf71",
+      "bytes": 901
+    },
+    {
+      "path": "tests/evals/cases/e029-autopilot-public-comparison-requires-human-release-gate.yaml",
+      "sha256": "6a6c8374886bb59b8fa8ccc399daa50fa12ae552f93c69ff16497ea4e4466a33",
+      "bytes": 1291
+    },
+    {
+      "path": "tests/evals/cases/e030-portable-skill-frontmatter-rejects-host-only-fields.yaml",
+      "sha256": "587a123af8b6c1b541e98092af74813288e9fd7bb3bfdc77f6f33319e2388371",
+      "bytes": 1134
+    },
+    {
+      "path": "tests/evals/cases/e031-missing-openlca-or-brightway-must-not-be-simulated.yaml",
+      "sha256": "8db1a7bf296e1eca15347c77e7790b30ab0e7f336e84b9191fd4333f8a525632",
+      "bytes": 1219
+    },
+    {
+      "path": "tests/evals/cases/e032-parallel-specialist-review-deduplicates-findings.yaml",
+      "sha256": "7fa3374e1b528fdeea7c0acea8811a321ffa7fd671e88c59d15f461dc0618e74",
+      "bytes": 1391
+    },
+    {
+      "path": "tests/evals/cases/e033-handoff-resume-requires-drift-check.yaml",
+      "sha256": "9de25b4ce14884485ecc3416761e040f6107f0dc129d008d003e6537bd7d729e",
+      "bytes": 1166
+    },
+    {
+      "path": "tests/evals/cases/e034-greet-rd-model-is-not-regulatory-model.yaml",
+      "sha256": "7f7392a0bb125d3fd5e110257714fd5ade442ab0a3fd1c980b314602614a77f2",
+      "bytes": 1335
+    },
+    {
+      "path": "tests/evals/rubric.md",
+      "sha256": "9f2c48b75da096fff2a6b794662aad11ba75328811cb60a97ab14eee73812092",
+      "bytes": 4916
+    },
+    {
+      "path": "tests/fixtures/closed-balance.csv",
+      "sha256": "559abe3688f7419d9ac69ca1e591eab95750cf60b21956607551575176f31fc7",
+      "bytes": 282
+    },
+    {
+      "path": "tests/fixtures/failed-balance.csv",
+      "sha256": "09fd02118cb7304168df1a06256408ceb0618dec6d949347ee4614ffdeeb9454",
+      "bytes": 217
+    },
+    {
+      "path": "tests/fixtures/results-a.csv",
+      "sha256": "c9cd681f2ba038550b213a003988ab1f34403f511cf11f459e287d2ab7a83767",
+      "bytes": 134
+    },
+    {
+      "path": "tests/fixtures/results-b.csv",
+      "sha256": "c9cd681f2ba038550b213a003988ab1f34403f511cf11f459e287d2ab7a83767",
+      "bytes": 134
+    },
+    {
+      "path": "tests/fixtures/results-changed.csv",
+      "sha256": "fc3375487a2911f4c020b062342abb0b3009f0e5714695362a2893b5084316d5",
+      "bytes": 134
+    },
+    {
+      "path": "tests/integration/README.md",
+      "sha256": "41010d059518908955433b31c93e068f83e79b026514caa19fd48491c3ded0d2",
+      "bytes": 1514
+    },
+    {
+      "path": "tests/integration/fixtures/synthetic-matrix/biosphere.csv",
+      "sha256": "a43e0866a622afac07ecfb0c3112403947c3ad073f7cbb5e8b2cb6fb807ebd63",
+      "bytes": 189
+    },
+    {
+      "path": "tests/integration/fixtures/synthetic-matrix/characterization.csv",
+      "sha256": "a1ca75d2056473116c2dcd631725877960a6adacdd4f027e0dec54da3c6c8b92",
+      "bytes": 245
+    },
+    {
+      "path": "tests/integration/fixtures/synthetic-matrix/demand.csv",
+      "sha256": "d90ce4b00a232da5727803d1e6e0b7a8004a09059982fdf894e16da7ff8ef564",
+      "bytes": 35
+    },
+    {
+      "path": "tests/integration/fixtures/synthetic-matrix/expected-results.csv",
+      "sha256": "76573829f31b00927c98dad8ce8012b0e6ac19b4698ae171619a0466d709f55b",
+      "bytes": 229
+    },
+    {
+      "path": "tests/integration/fixtures/synthetic-matrix/processes.csv",
+      "sha256": "7555e0b412cb86b12e721c33c19a07915a796247d6f94a5ed8d6313ad30cef0e",
+      "bytes": 97
+    },
+    {
+      "path": "tests/integration/fixtures/synthetic-matrix/technosphere.csv",
+      "sha256": "dd333fea1e51281e703fd07b7930abd09f01fe61b7441d40ac0255ff570387d4",
+      "bytes": 130
+    },
+    {
+      "path": "tests/test_agents_hooks.py",
+      "sha256": "eb7ae51aec6051daafa4180a91fcf0778f6c4a5638143a519dc1271c591a2b2e",
+      "bytes": 2843
+    },
+    {
+      "path": "tests/test_mcp_server.py",
+      "sha256": "683fda1c3448c07fd02ee9dfdd9f32edbf0e3bfdc2f95f902259d6bc1314dfc5",
+      "bytes": 2960
+    },
+    {
+      "path": "tests/test_platform_builds.py",
+      "sha256": "63d61ed29ee4c06aebd4a971c5665bd7c4ec6135a61c6142810b4ee6ff4b8b46",
+      "bytes": 7235
+    },
+    {
+      "path": "tests/test_repo.py",
+      "sha256": "ed8b0094af9b504d94b6700d546b99b26380d61732f5ca836f5c7761cf34a2e8",
+      "bytes": 1736
+    },
+    {
+      "path": "tests/test_runtime_adapters.py",
+      "sha256": "7512de5b3f2127ae74863a59e650ab9723913344f2458decfc5d03065b58fda5",
+      "bytes": 2885
+    },
+    {
+      "path": "tests/test_study_tools.py",
+      "sha256": "533365f623b2408eb6f72bf5870b647b450edd304148b80fc25bfc4318a8a454",
+      "bytes": 5243
+    },
+    {
+      "path": "tests/test_tool_snapshots.py",
+      "sha256": "a43edb3405a9028723e0bc8ce7eeca49fcc022e91e515e3d9561e97664dd6a7f",
+      "bytes": 2603
+    },
+    {
+      "path": "tests/test_workflow_contracts.py",
+      "sha256": "ad7646b4edaed7595cabcb54fd44f4a68d2fa71f1cd7c10f23efb0065cae21cc",
+      "bytes": 2430
+    }
+  ]
+}
