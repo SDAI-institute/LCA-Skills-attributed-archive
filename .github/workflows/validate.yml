@@ -1,0 +1,35 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Validate source strictly
+        run: python scripts/validate_repo.py --strict
+      - name: Validate local Markdown routes
+        run: python scripts/check_markdown_links.py
+      - name: Compile Python
+        run: python -m compileall -q lca_tools scripts tests
+      - name: Run deterministic tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Build host distributions
+        run: python scripts/build_distributions.py --clean
+      - name: Validate host distributions
+        run: python scripts/validate_distributions.py
+      - name: Build deterministic source release
+        run: python scripts/build_source_release.py
+      - name: Generate local qualification evidence
+        run: python scripts/host_qualification.py --output dist/reports/host-qualification.json
+      - name: Run synthetic LCA reference
+        run: python scripts/run_reference_lca.py --json
