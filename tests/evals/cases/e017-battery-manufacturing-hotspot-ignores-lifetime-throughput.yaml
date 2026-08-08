@@ -8,3 +8,19 @@ skills:
 prompt: |
   Compare two battery chemistries per kilogram of pack and ignore depth of discharge, efficiency, fade, replacement, and cycle life.
 expected:
+  must_detect:
+    - function is delivered energy/service, not pack mass alone
+    - lifetime and performance parameters control reference flow
+  must_do:
+    - define usable delivered energy or application-specific service
+    - model pack-to-cell overhead, efficiency, fade, cycle life, replacement, and end of life
+    - run lifetime sensitivity and uncertainty
+  must_not:
+    - make final recommendation per kg pack
+  durable_artifacts:
+    - goal-and-scope.md
+    - parameters.csv
+    - scenario-register.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

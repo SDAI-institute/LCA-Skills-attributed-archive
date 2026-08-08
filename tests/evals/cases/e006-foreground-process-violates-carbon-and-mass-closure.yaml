@@ -8,3 +8,18 @@ prompt: |
 expected:
   must_detect:
     - wet/dry basis and mass totals are inconsistent
+    - carbon closure likely fails
+    - water and biomass/by-products may be missing
+  must_do:
+    - reconstruct water, substrate, biomass, gas, by-products, and evaporation
+    - perform mass and elemental balances
+    - stop import until residual is resolved or explicitly bounded
+  must_not:
+    - force-scale outputs to make the numbers fit without physical explanation
+  durable_artifacts:
+    - balances.csv
+    - parameters.csv
+    - decision-log.md
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

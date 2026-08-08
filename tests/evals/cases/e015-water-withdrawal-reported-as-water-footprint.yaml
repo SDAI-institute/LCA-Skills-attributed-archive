@@ -8,3 +8,18 @@ prompt: |
   Plant A withdraws less water than Plant B, so report that A has the lower water footprint in every location.
 expected:
   must_detect:
+    - withdrawal differs from consumption and degradation
+    - water scarcity is spatial/temporal
+    - returned water quality/location matter
+  must_do:
+    - inventory withdrawal, consumption, source, return, quality, and timing
+    - select an authorized water-impact method such as AWARE where appropriate
+    - analyze site-specific scarcity and quality impacts
+  must_not:
+    - rank solely on gross withdrawal volume
+  durable_artifacts:
+    - data-register.csv
+    - lcia-method-manifest.yaml
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

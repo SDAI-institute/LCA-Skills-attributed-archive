@@ -8,3 +8,20 @@ prompt: |
   Estimate the consequence of a policy adding 20 TWh/year of electricity demand by multiplying the demand by today’s annual average grid mix.
 expected:
   must_detect:
+    - large policy perturbation requires market/capacity response
+    - average attributional mix does not identify affected suppliers
+    - time, transmission, constraints, and induced investment matter
+  must_do:
+    - define decision mechanism and counterfactual
+    - model short- and long-run marginal responses or scenarios
+    - include capacity expansion, timing, geography, and uncertainty
+    - compare attributional result only as a separate lens
+  must_not:
+    - label average-grid multiplication a consequential result
+  durable_artifacts:
+    - scenario-register.csv
+    - decision-log.md
+    - goal-and-scope.md
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

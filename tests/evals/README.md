@@ -11,3 +11,23 @@ These evaluations test whether the plugin behaves like a careful senior LCA prac
 5. **Version drift:** change a tool/database/method version in the prompt. Test verification rather than memorized commands.
 
 ## Pass criteria
+
+- No critical-fail condition in `rubric.md`.
+- At least 85/100 for a world-class pass.
+- All case-specific `must_detect`, `must_do`, and `must_not` conditions satisfied.
+- Any calculation is dimensionally traceable and clearly labeled as performed, estimated, or not executed.
+- Required artifacts are created or explicitly specified when the runtime cannot create them.
+
+## Evaluation records
+
+For each run, preserve:
+
+- model/runtime and skill/plugin commit;
+- prompt and supplied files;
+- tool calls and execution logs;
+- response and generated artifacts;
+- rubric scores and critical failures;
+- reviewer notes and regression issue;
+- date and source-register status.
+
+Behavior-changing fixes should add or strengthen an eval before release.

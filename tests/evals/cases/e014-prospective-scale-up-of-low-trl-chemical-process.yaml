@@ -9,3 +9,20 @@ prompt: |
   Use a 10 mL laboratory yield and laboratory electricity meter reading as the commercial inventory for a 100,000 t/y plant.
 expected:
   must_detect:
+    - scale mismatch
+    - lab utilities/solvent recovery/yield do not represent commercial operation
+    - learning and background decarbonization uncertainty
+  must_do:
+    - build engineering scale-up scenarios with mass/energy balances
+    - model solvent recycle, heat integration, equipment, controls, yields, and capacity factor
+    - separate foreground scale-up from future background scenarios
+    - use ranges and maturity labels
+  must_not:
+    - linearly scale all laboratory inputs
+  durable_artifacts:
+    - parameters.csv
+    - scenario-register.csv
+    - process-map.md
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

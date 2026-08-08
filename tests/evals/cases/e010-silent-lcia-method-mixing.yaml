@@ -9,3 +9,20 @@ prompt: |
 expected:
   must_detect:
     - method and factor mixing
+    - incompatible units/reference systems
+    - normalization and weighting are value choices
+    - single score lacks governing authorization
+  must_do:
+    - select coherent method implementations or define a transparent harmonization protocol
+    - keep category results separate
+    - record every version and modification
+    - require sensitivity/value-choice disclosure
+  must_not:
+    - add unharmonized scores
+    - call the combined result scientific fact
+  durable_artifacts:
+    - tool-runs/lcia-method-manifest.yaml
+    - decision-log.md
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

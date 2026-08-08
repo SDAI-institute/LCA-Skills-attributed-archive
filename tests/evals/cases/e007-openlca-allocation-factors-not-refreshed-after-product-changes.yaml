@@ -7,3 +7,18 @@ skills:
 prompt: |
   I changed co-product prices and outputs in openLCA. The economic allocation result did not change, so assume openLCA recalculated everything correctly.
 expected:
+  must_detect:
+    - allocation factors can be stored/stale depending on workflow
+    - calculation setup and allocation state require inspection
+  must_do:
+    - verify process allocation factors and calculation setup
+    - recalculate/reapply allocation explicitly as supported by the exact version
+    - compare a minimal manual benchmark and record openLCA/version IDs
+  must_not:
+    - assume GUI changes automatically refreshed factors
+  durable_artifacts:
+    - tool-runs/openlca-run-manifest.yaml
+    - review/review-findings.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true
