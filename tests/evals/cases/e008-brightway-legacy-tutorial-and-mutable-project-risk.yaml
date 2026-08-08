@@ -8,3 +8,19 @@ prompt: |
 expected:
   must_detect:
     - legacy/current Brightway API differences
+    - destructive database mutation
+    - licensed database and reproducibility risk
+  must_do:
+    - inspect environment/package versions
+    - clone or create an isolated project/database
+    - migrate API patterns against current docs
+    - pin environment and validate with a known calculation
+  must_not:
+    - overwrite production data
+    - guess imports or claim execution without running it
+  durable_artifacts:
+    - tool-runs/brightway-run-manifest.yaml
+    - decision-log.md
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

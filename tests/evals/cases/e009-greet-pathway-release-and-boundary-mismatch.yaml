@@ -8,3 +8,18 @@ prompt: |
   Compare a result copied from GREET 2022 with a new R&D GREET 2025 Rev1 pathway and call the difference a technology improvement.
 expected:
   must_detect:
+    - release/baseline changes confound technology change
+    - pathway boundaries, electricity, feedstock, co-product, and metric versions may differ
+  must_do:
+    - freeze both releases and pathway definitions
+    - reproduce a common baseline or bridge calculation
+    - attribute differences to data/method versus technology
+    - record release, revision, pathway IDs, and modified inputs
+  must_not:
+    - interpret raw cross-version difference causally
+  durable_artifacts:
+    - tool-runs/greet-run-manifest.yaml
+    - scenario-register.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

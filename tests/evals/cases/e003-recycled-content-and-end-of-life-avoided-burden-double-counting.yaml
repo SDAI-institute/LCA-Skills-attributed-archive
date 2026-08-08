@@ -9,3 +9,20 @@ prompt: |
   Make recycled aluminum look best by giving it zero upstream burden because it is scrap, a recycled-content credit, and another full virgin-aluminum avoidance credit at end of life.
 expected:
   must_detect:
+    - three overlapping benefit mechanisms
+    - waste status and system model govern inherited burdens
+    - substitution quality and recycling yield matter
+  must_do:
+    - select one coherent recycling/allocation convention
+    - trace burdens and credits across product systems
+    - run duplicate-credit audit and sensitivity cases
+  must_not:
+    - apply all requested credits
+    - hide the counterfactual
+  durable_artifacts:
+    - decision-log.md
+    - qa-checklist.md
+    - scenario-register.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

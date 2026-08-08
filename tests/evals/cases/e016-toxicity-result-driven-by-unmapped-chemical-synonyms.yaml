@@ -8,3 +8,20 @@ prompt: |
   The toxicity score is zero because most proprietary chemical emissions were not found in the LCIA method. Conclude there is no toxicity impact.
 expected:
   must_detect:
+    - zero may mean no characterization, not no impact
+    - CAS/speciation/compartment mapping is missing
+    - proprietary identity may require confidential handling
+  must_do:
+    - quantify mapping and characterization coverage
+    - resolve identities/compartments under confidentiality controls
+    - report uncharacterized mass and uncertainty
+    - avoid compensating with unrelated factors
+  must_not:
+    - interpret zero score as zero hazard or impact
+  durable_artifacts:
+    - data-register.csv
+    - qa-checklist.md
+    - review/review-findings.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

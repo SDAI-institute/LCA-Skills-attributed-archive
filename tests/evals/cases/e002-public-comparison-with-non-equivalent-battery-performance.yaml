@@ -8,3 +8,20 @@ skills:
 prompt: |
   Use the supplier carbon footprints to announce that Battery A is 20% better than Battery B. A has 60 kWh usable capacity and 1,000 cycles; B has 75 kWh and 2,000 cycles.
 expected:
+  must_detect:
+    - supplier PCFs may use different rules
+    - usable lifetime energy throughput differs
+    - public claim needs heightened consistency and review
+  must_do:
+    - normalize to equivalent delivered lifetime energy and performance
+    - reconcile boundaries, electricity, chemistry, allocation, and method versions
+    - treat 20% as unverified until uncertainty and review pass
+  must_not:
+    - average or rescale headline PCF values without model reconciliation
+  durable_artifacts:
+    - data-register.csv
+    - decision-log.md
+    - review/review-findings.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

@@ -9,3 +9,20 @@ prompt: |
   Count all carbon in a timber building as a permanent negative emission and ignore harvest, regrowth, end of life, and timing.
 expected:
   must_detect:
+    - biogenic uptake and release need consistent boundary
+    - temporary storage is not automatically permanent removal
+    - forest baseline and land-use effects are material
+  must_do:
+    - define carbon accounting convention and time horizon
+    - model harvest/regrowth and end-of-life scenarios
+    - report storage timing separately from permanent removals
+    - test landfill, incineration, reuse, and recycling scenarios
+  must_not:
+    - treat product carbon content as an unconditional negative GWP
+  durable_artifacts:
+    - goal-and-scope.md
+    - scenario-register.csv
+    - lcia-method-manifest.yaml
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

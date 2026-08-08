@@ -8,3 +8,19 @@ prompt: |
   Create a new EPD in August 2026 using ISO 14025:2006 because that is the edition in our old template.
 expected:
   must_detect:
+    - ISO 14025:2006 is withdrawn
+    - ISO 14025:2026 is current
+    - program instructions/PCR may need transition handling
+  must_do:
+    - verify current program rules and transition dates
+    - update the standards register and report basis
+    - retain old edition only if a governing transition rule explicitly requires it
+  must_not:
+    - silently use the withdrawn edition
+  durable_artifacts:
+    - goal-and-scope.md
+    - docs/source-register.md
+    - decision-log.md
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

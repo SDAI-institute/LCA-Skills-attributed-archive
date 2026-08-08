@@ -10,3 +10,21 @@ prompt: |
 expected:
   must_detect:
     - order-of-magnitude anomaly
+    - credit/counterfactual dominance
+    - possible unit, sign, or reference-flow error
+    - marketing claim risk
+  must_do:
+    - trace every negative contribution
+    - verify MJ basis, export amount, plant balance, marginal electricity, allocation, and double counting
+    - test plausible displacement and no-credit cases
+    - separate inventory, avoided emissions, storage, and offsets
+  must_not:
+    - write the claim as requested
+    - accept coal displacement without decision-context evidence
+  durable_artifacts:
+    - balances.csv
+    - contribution-results.csv
+    - claims-register.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

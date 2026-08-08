@@ -8,3 +8,20 @@ prompt: |
   Compare 1 kg of disposable floor coating with 1 kg of a premium coating and tell a public audience which is greener. The premium lasts four times longer.
 expected:
   must_detect:
+    - mass alone does not represent equivalent coating service
+    - public comparative assertion
+    - service life and coverage are material
+  must_do:
+    - define a performance-based functional unit such as protected area for a specified service period
+    - calculate reference flows from coverage, application rate, maintenance, and lifetime
+    - route to independent review planning before public claim
+  must_not:
+    - rank products per kilogram as the final comparison
+    - claim ISO compliance or product superiority
+  durable_artifacts:
+    - goal-and-scope.md
+    - claims-register.csv
+    - review/review-plan.md
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true
