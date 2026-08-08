@@ -1,0 +1,10 @@
+id: E006
+title: "Foreground process violates carbon and mass closure"
+risk_level: high
+skills:
+  - lca-inventory
+prompt: |
+  A fermentation model consumes 900 kg glucose solution at 50 wt% and produces 600 kg dry product plus 200 kg CO2 and 300 kg wastewater. Import it as-is.
+expected:
+  must_detect:
+    - wet/dry basis and mass totals are inconsistent

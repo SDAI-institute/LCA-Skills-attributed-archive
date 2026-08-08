@@ -1,0 +1,10 @@
+id: E017
+title: "Battery manufacturing hotspot ignores lifetime throughput"
+risk_level: high
+skills:
+  - lca-sector
+  - lca-scope
+  - lca-interpret
+prompt: |
+  Compare two battery chemistries per kilogram of pack and ignore depth of discharge, efficiency, fade, replacement, and cycle life.
+expected:

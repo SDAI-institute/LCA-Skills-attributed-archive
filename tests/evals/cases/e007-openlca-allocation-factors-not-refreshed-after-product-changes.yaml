@@ -1,0 +1,9 @@
+id: E007
+title: "OpenLCA allocation factors not refreshed after product changes"
+risk_level: high
+skills:
+  - lca-openlca
+  - lca-review
+prompt: |
+  I changed co-product prices and outputs in openLCA. The economic allocation result did not change, so assume openLCA recalculated everything correctly.
+expected:

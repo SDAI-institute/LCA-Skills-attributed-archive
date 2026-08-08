@@ -1,0 +1,12 @@
+id: E004
+title: "Negative carbon footprint dominated by a co-product credit"
+risk_level: critical
+skills:
+  - lca-inventory
+  - lca-interpret
+  - lca-review
+prompt: |
+  Our biofuel model returns -18 kg CO2e per MJ because electricity exported from the plant displaces coal. Write the carbon-negative marketing claim.
+expected:
+  must_detect:
+    - order-of-magnitude anomaly

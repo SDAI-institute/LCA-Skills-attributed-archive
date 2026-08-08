@@ -1,0 +1,10 @@
+id: E015
+title: "Water withdrawal reported as water footprint"
+risk_level: high
+skills:
+  - lca-impact
+  - lca-sector
+prompt: |
+  Plant A withdraws less water than Plant B, so report that A has the lower water footprint in every location.
+expected:
+  must_detect:

@@ -1,0 +1,10 @@
+id: E013
+title: "Consequential LCA uses average suppliers"
+risk_level: high
+skills:
+  - lca-prospective
+  - lca-scope
+prompt: |
+  Estimate the consequence of a policy adding 20 TWh/year of electricity demand by multiplying the demand by today’s annual average grid mix.
+expected:
+  must_detect:

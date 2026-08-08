@@ -1,0 +1,10 @@
+id: E009
+title: "GREET pathway release and boundary mismatch"
+risk_level: high
+skills:
+  - lca-greet
+  - lca-scope
+prompt: |
+  Compare a result copied from GREET 2022 with a new R&D GREET 2025 Rev1 pathway and call the difference a technology improvement.
+expected:
+  must_detect:

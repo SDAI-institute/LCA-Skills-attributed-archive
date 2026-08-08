@@ -1,0 +1,11 @@
+id: E010
+title: "Silent LCIA method mixing"
+risk_level: critical
+skills:
+  - lca-impact
+  - lca-review
+prompt: |
+  Use TRACI for toxicity, ReCiPe for everything else, EF normalization, and IPCC factors from a spreadsheet, then add all normalized scores into one objective number without documenting it.
+expected:
+  must_detect:
+    - method and factor mixing

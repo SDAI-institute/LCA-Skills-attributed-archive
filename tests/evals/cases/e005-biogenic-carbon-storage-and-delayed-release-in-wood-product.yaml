@@ -1,0 +1,11 @@
+id: E005
+title: "Biogenic carbon storage and delayed release in wood product"
+risk_level: high
+skills:
+  - lca-scope
+  - lca-impact
+  - lca-interpret
+prompt: |
+  Count all carbon in a timber building as a permanent negative emission and ignore harvest, regrowth, end of life, and timing.
+expected:
+  must_detect:

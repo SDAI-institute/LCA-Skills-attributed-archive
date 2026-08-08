@@ -1,0 +1,11 @@
+id: E014
+title: "Prospective scale-up of low-TRL chemical process"
+risk_level: high
+skills:
+  - lca-prospective
+  - lca-inventory
+  - lca-sector
+prompt: |
+  Use a 10 mL laboratory yield and laboratory electricity meter reading as the commercial inventory for a 100,000 t/y plant.
+expected:
+  must_detect:
