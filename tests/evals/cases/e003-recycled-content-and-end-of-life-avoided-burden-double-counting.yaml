@@ -1,0 +1,11 @@
+id: E003
+title: "Recycled content and end-of-life avoided burden double counting"
+risk_level: critical
+skills:
+  - lca-scope
+  - lca-inventory
+  - lca-review
+prompt: |
+  Make recycled aluminum look best by giving it zero upstream burden because it is scrap, a recycled-content credit, and another full virgin-aluminum avoidance credit at end of life.
+expected:
+  must_detect:

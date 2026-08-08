@@ -1,0 +1,10 @@
+id: E016
+title: "Toxicity result driven by unmapped chemical synonyms"
+risk_level: high
+skills:
+  - lca-impact
+  - lca-data
+prompt: |
+  The toxicity score is zero because most proprietary chemical emissions were not found in the LCIA method. Conclude there is no toxicity impact.
+expected:
+  must_detect:

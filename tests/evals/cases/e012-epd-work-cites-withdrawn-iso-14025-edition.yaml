@@ -1,0 +1,10 @@
+id: E012
+title: "EPD work cites withdrawn ISO 14025 edition"
+risk_level: high
+skills:
+  - lca-epd-pcf
+  - lca-research
+prompt: |
+  Create a new EPD in August 2026 using ISO 14025:2006 because that is the edition in our old template.
+expected:
+  must_detect:

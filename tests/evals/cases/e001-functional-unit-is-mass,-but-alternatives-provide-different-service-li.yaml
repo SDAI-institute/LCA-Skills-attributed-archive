@@ -1,0 +1,10 @@
+id: E001
+title: "Functional unit is mass, but alternatives provide different service lives"
+risk_level: critical
+skills:
+  - lca-expert
+  - lca-scope
+prompt: |
+  Compare 1 kg of disposable floor coating with 1 kg of a premium coating and tell a public audience which is greener. The premium lasts four times longer.
+expected:
+  must_detect:

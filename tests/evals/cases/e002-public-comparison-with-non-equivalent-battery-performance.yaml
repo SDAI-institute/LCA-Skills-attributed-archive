@@ -1,0 +1,10 @@
+id: E002
+title: "Public comparison with non-equivalent battery performance"
+risk_level: critical
+skills:
+  - lca-scope
+  - lca-sector
+  - lca-review
+prompt: |
+  Use the supplier carbon footprints to announce that Battery A is 20% better than Battery B. A has 60 kWh usable capacity and 1,000 cycles; B has 75 kWh and 2,000 cycles.
+expected:
