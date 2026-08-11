@@ -1,0 +1,26 @@
+id: E027
+title: "Supplier EPDs treated as directly comparable datasets"
+risk_level: high
+skills:
+  - lca-data
+  - lca-epd-pcf
+prompt: |
+  Select the lowest GWP supplier from three EPD PDFs even though they use different PCR versions, declared units, geography, and system boundaries.
+expected:
+  must_detect:
+    - EPDs are not automatically comparable
+    - declared/functional units and module coverage differ
+    - PCR/program/version and data age matter
+  must_do:
+    - screen comparability criteria
+    - normalize only after valid equivalence and rule reconciliation
+    - request product performance/reference-flow data and uncertainty
+    - state when comparison is not defensible
+  must_not:
+    - rank headline GWP numbers directly
+  durable_artifacts:
+    - data-register.csv
+    - review/review-findings.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

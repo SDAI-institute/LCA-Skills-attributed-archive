@@ -1,0 +1,26 @@
+id: E030
+title: "Portable skill build rejects host-only frontmatter"
+risk_level: medium
+skills:
+  - lca-doctor
+  - lca-validate
+prompt: |
+  Package the canonical LCA skill for ChatGPT and Claude.ai. Keep argument-hint, context, agent, and disable-model-invocation fields in every SKILL.md because Claude Code understands them.
+expected:
+  must_detect:
+    - host-specific frontmatter can break portable Agent Skills imports
+    - canonical portable source and Claude Code overlays require separate build products
+    - target-host upload testing is distinct from structural validation
+  must_do:
+    - retain only standard portable fields in ChatGPT and Claude.ai upload builds
+    - inject Claude-only fields only in Claude Code distributions
+    - validate ZIP root, skill directory name, references, hashes, and frontmatter
+  must_not:
+    - claim ChatGPT or Claude.ai import success from static file validation alone
+    - leak Claude-only fields into the canonical skill
+  durable_artifacts:
+    - bundle-manifest.json
+    - host-qualification.json
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

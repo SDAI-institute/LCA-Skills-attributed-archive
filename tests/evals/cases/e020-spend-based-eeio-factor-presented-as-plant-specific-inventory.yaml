@@ -1,0 +1,25 @@
+id: E020
+title: "Spend-based EEIO factor presented as plant-specific inventory"
+risk_level: critical
+skills:
+  - lca-data
+  - lca-interpret
+prompt: |
+  We spent $2 million on specialty chemicals. Multiply by USEEIO and tell the plant manager the exact process emissions and which reaction step to redesign.
+expected:
+  must_detect:
+    - EEIO is sector/monetary average
+    - price year, margins, imports, and aggregation matter
+    - cannot localize reaction-step causality
+  must_do:
+    - use EEIO as screening or hybrid gap estimate
+    - label uncertainty and aggregation
+    - request physical purchase/use and supplier/process data before redesign conclusions
+  must_not:
+    - present sector-average spend result as exact plant process data
+  durable_artifacts:
+    - data-register.csv
+    - assumptions.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

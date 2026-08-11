@@ -1,0 +1,27 @@
+id: E018
+title: "Construction module D and recycled-content credit overlap"
+risk_level: critical
+skills:
+  - lca-epd-pcf
+  - lca-sector
+  - lca-review
+prompt: |
+  For a building product, subtract today’s recycled-content benefit in A1–A3 and also subtract the full same virgin-material benefit in module D.
+expected:
+  must_detect:
+    - potential overlap between inherited/recycled-content and beyond-boundary benefit
+    - EN 15804/PCR/program rules govern module accounting
+    - quality and recovery losses matter
+  must_do:
+    - follow current PCR/program module rules
+    - trace scrap burdens and benefits across product systems
+    - calculate recovery, quality, substitution, and net exported flow
+    - keep module D separately reported
+  must_not:
+    - net module D into A1–A3 headline without authorization
+  durable_artifacts:
+    - decision-log.md
+    - review/review-findings.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

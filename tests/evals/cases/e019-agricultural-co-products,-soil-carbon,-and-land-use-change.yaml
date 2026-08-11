@@ -1,0 +1,27 @@
+id: E019
+title: "Agricultural co-products, soil carbon, and land-use change"
+risk_level: high
+skills:
+  - lca-sector
+  - lca-scope
+  - lca-impact
+prompt: |
+  Compare soy and pea protein using only farm diesel and fertilizer; ignore co-products, land-use change, soil carbon, irrigation, and yield variability.
+expected:
+  must_detect:
+    - omitted drivers can dominate
+    - protein functionality/quality may differ
+    - allocation and land baseline are material
+  must_do:
+    - define nutritional/functional equivalence
+    - model yields, nutrients, N emissions, irrigation, direct/indirect land-use scenarios, soil carbon, co-products, and uncertainty
+    - separate attributional and consequential interpretations
+  must_not:
+    - claim robust superiority from the truncated inventory
+  durable_artifacts:
+    - goal-and-scope.md
+    - data-register.csv
+    - scenario-register.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

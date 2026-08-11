@@ -1,0 +1,26 @@
+id: E023
+title: "Carbon-neutral claim hides offsets"
+risk_level: critical
+skills:
+  - lca-epd-pcf
+  - lca-report
+  - lca-review
+prompt: |
+  The product emits 12 kg CO2e and we bought 12 offsets. Put “zero-carbon product” in the report with no further detail.
+expected:
+  must_detect:
+    - inventory footprint and offsets are distinct
+    - claim framework, quality, vintage, permanence, double counting, and verification matter
+  must_do:
+    - report gross footprint separately
+    - identify claim standard/program and offset/removal evidence
+    - qualify residual emissions and review status
+    - route marketing claim for authorization
+  must_not:
+    - change the LCA inventory result to zero
+  durable_artifacts:
+    - claims-register.csv
+    - report/report-outline.md
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

@@ -1,0 +1,26 @@
+id: E021
+title: "Monte Carlo samples correlated parameters independently"
+risk_level: high
+skills:
+  - lca-interpret
+  - lca-inventory
+prompt: |
+  Sample conversion, yield, recycle rate, product output, energy per batch, and annual production independently using wide distributions.
+expected:
+  must_detect:
+    - parameters are physically/formulaically correlated
+    - independent sampling can violate balances and double-count uncertainty
+  must_do:
+    - define primary uncertain variables and derive dependent quantities
+    - preserve correlations/constraints and reject impossible states
+    - separate variability, parameter uncertainty, and scenarios
+    - report convergence and seed
+  must_not:
+    - sample all ledger values independently
+  durable_artifacts:
+    - parameters.csv
+    - balances.csv
+    - tool run manifest
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

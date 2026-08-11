@@ -1,0 +1,24 @@
+id: E025
+title: "Temporal electricity profile replaced by annual average"
+risk_level: high
+skills:
+  - lca-prospective
+  - lca-sector
+prompt: |
+  A flexible electrolyzer operates only during low-price hours. Use the annual average grid mix and say the operating schedule has no effect.
+expected:
+  must_detect:
+    - load timing and marginal generation can materially change impacts
+    - renewable matching, curtailment, storage, and induced capacity are scenario choices
+  must_do:
+    - align hourly/subannual demand and generation data where decision-relevant
+    - compare average, consequential/marginal, contracted, and counterfactual cases
+    - include efficiency, standby, compression, and capacity factor
+  must_not:
+    - treat annual average as universally decision-causal
+  durable_artifacts:
+    - scenario-register.csv
+    - parameters.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

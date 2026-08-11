@@ -1,0 +1,27 @@
+id: E028
+title: "Zero contribution caused by unlinked providers"
+risk_level: high
+skills:
+  - lca-openlca
+  - lca-brightway
+  - lca-review
+prompt: |
+  Half the foreground inputs show zero upstream impacts. Treat them as burden-free because the software calculation completed successfully.
+expected:
+  must_detect:
+    - unlinked exchanges/provider/reference-product errors
+    - zero is a diagnostic trigger
+    - calculation success does not imply model completeness
+  must_do:
+    - audit links, signs, units, locations, products, and database availability
+    - quantify unlinked amounts and expected coverage
+    - run known-provider benchmark before release
+  must_not:
+    - interpret unlinked inputs as zero burden
+  durable_artifacts:
+    - model-ledger.csv
+    - qa-checklist.md
+    - review/review-findings.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true
