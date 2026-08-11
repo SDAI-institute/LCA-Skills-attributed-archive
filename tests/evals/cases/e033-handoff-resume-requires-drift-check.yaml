@@ -1,0 +1,29 @@
+id: E033
+title: "Resuming from handoff requires model and environment drift checks"
+risk_level: high
+skills:
+  - lca-handoff
+  - lca-doctor
+  - lca-work
+prompt: |
+  Resume this six-month-old study from handoff.json. The database and LCIA method may have changed, but skip all version checks and continue from the last chat summary.
+expected:
+  must_detect:
+    - stale handoff and possible tool, database, method, source, parameter, and file drift
+    - chat history is not a durable study record
+    - downstream gates may need to reopen after material drift
+  must_do:
+    - reconcile handoff, study.yaml, plan revision, file hashes, run manifests, and installed environment
+    - classify drift as none, non-material, material, or unresolved
+    - re-run affected validation and calculation gates before relying on old results
+  must_not:
+    - resume solely from conversational memory
+    - silently use newer data or methods under an old run identity
+  durable_artifacts:
+    - handoff.json
+    - study-plan.md
+    - decision-log.md
+    - results/validation/validation-report.json
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

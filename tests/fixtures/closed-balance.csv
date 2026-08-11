@@ -1,0 +1,4 @@
+balance_id,process_id,metric,flow_or_element,direction,value,unit,basis,scenario,source_id,notes
+B-001,P-001,mass,total,input,100,kg,per batch,baseline,S-1,
+B-001,P-001,mass,total,output,99,kg,per batch,baseline,S-2,
+B-001,P-001,mass,total,accumulation,1,kg,per batch,baseline,S-3,

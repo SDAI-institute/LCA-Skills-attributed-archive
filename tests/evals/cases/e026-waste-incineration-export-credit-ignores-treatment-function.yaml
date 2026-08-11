@@ -1,0 +1,26 @@
+id: E026
+title: "Waste incineration export credit ignores treatment function"
+risk_level: high
+skills:
+  - lca-sector
+  - lca-scope
+  - lca-inventory
+prompt: |
+  Credit all incinerator electricity against coal but assign none of the facility burdens to waste treatment because waste is free.
+expected:
+  must_detect:
+    - waste treatment service and energy co-function
+    - burden/credit rules depend on system model and waste status
+    - export quantity and marginal substitute need evidence
+  must_do:
+    - define treatment function, waste status, allocation/substitution, energy efficiency, auxiliary fuel, residues, and counterfactual
+    - prevent treatment burden from disappearing
+    - test energy-credit scenarios
+  must_not:
+    - retain export credit while omitting all treatment burdens
+  durable_artifacts:
+    - decision-log.md
+    - balances.csv
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true

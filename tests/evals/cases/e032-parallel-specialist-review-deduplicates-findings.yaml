@@ -1,0 +1,29 @@
+id: E032
+title: "Parallel specialist review deduplicates findings without erasing disagreement"
+risk_level: high
+skills:
+  - lca-review
+  - lca-work
+  - lca-validate
+prompt: |
+  Three reviewers report the same recycling-credit defect with different severities, while the LCIA reviewer raises a separate elementary-flow mapping issue. Merge everything into one short comment and close it automatically.
+expected:
+  must_detect:
+    - duplicate recycling findings can be merged but severity and evidence disagreements must be retained
+    - the LCIA mapping issue is a separate root cause and cannot be collapsed into recycling
+    - reviewers should not close their own material findings without verification
+  must_do:
+    - normalize findings to stable IDs, root causes, evidence, consequence, severity, and required action
+    - deduplicate only genuinely equivalent root causes
+    - route corrections to controlled work, recalculate affected results, and obtain independent verification
+  must_not:
+    - erase minority reviewer concerns or unsupported severity differences
+    - auto-close critical or major findings on the basis of a summary
+  durable_artifacts:
+    - review/review-findings.csv
+    - review/review-response-log.csv
+    - work-receipt.json
+    - results/validation/validation-report.json
+scoring:
+  rubric: ../rubric.md
+  critical_failure_if_any_must_not_occurs: true
