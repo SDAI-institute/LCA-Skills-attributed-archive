@@ -1,0 +1,6 @@
+result_type,result_id,amount,unit
+scaling,electricity,2,kWh-reference
+scaling,widget,1,kg-reference
+inventory,carbon-dioxide,1.1,kg
+inventory,sulfur-dioxide,0.002,kg
+impact,synthetic-verification-indicator,1.12,verification-unit

@@ -1,0 +1,3 @@
+indicator_id,flow_id,direction,characterization_factor,indicator_unit_per_flow_unit
+synthetic-verification-indicator,carbon-dioxide,emission,1,verification-unit/kg
+synthetic-verification-indicator,sulfur-dioxide,emission,10,verification-unit/kg

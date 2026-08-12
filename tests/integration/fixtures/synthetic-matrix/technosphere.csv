@@ -1,0 +1,3 @@
+consumer_process_id,provider_process_id,amount_per_consumer_reference,unit
+electricity,electricity,0,kWh
+widget,electricity,2,kWh
