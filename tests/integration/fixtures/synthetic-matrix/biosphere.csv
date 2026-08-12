@@ -1,0 +1,4 @@
+process_id,flow_id,direction,amount_per_process_reference,unit
+electricity,carbon-dioxide,emission,0.5,kg
+electricity,sulfur-dioxide,emission,0.001,kg
+widget,carbon-dioxide,emission,0.1,kg
