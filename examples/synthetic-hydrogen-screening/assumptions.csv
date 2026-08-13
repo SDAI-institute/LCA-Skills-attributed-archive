@@ -1,0 +1,2 @@
+assumption_id,statement,reason,evidence_class,expected_influence,baseline,sensitivity_low,sensitivity_high,owner,validation_action,status,review_date,notes
+A-001,Oxygen receives no environmental credit,marketability and displaced production are undefined,SCENARIO,potentially high if a large credit were added,no credit,no credit,separate validated utilization case only,maintainer,retain no-credit baseline,accepted-for-example,2026-08-07,

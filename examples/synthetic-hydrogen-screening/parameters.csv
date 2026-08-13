@@ -1,0 +1,3 @@
+parameter_id,name,value,unit,formula,distribution,distribution_parameters,scenario,correlation_group,source_id,model_location,status,notes
+PAR-001,specific electricity consumption,52,kWh/kg H2,electricity_kWh / hydrogen_kg,scenario,"45,52,65",baseline,electrolyzer-performance,D-004,P-EL-001,active,synthetic
+PAR-002,water input,9,kg/kg H2,water_kg / hydrogen_kg,fixed-example,,baseline,mass-balance,D-001,P-EL-001,active,synthetic

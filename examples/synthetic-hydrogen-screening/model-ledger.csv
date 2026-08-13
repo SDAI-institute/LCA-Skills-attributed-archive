@@ -1,0 +1,4 @@
+model_item_id,type,name,reference_product_or_flow,unit,provider_or_tool,object_id_or_uuid,source_id,version,system_model,geography,technology,time_period,allocation_or_recycling_rule,status,notes
+M-001,process,Generic electrolysis,hydrogen,kg,foreground calculation,P-EL-001,SYNTH-EXAMPLE,1,project-specific,Example Region,generic electrolysis,2026 scenario,oxygen no credit baseline,ready,synthetic
+M-002,provider-candidate,Electricity supply,electricity,kWh,not selected,P-ELE-001,SCEN-ELEC,,not selected,Example Region,unspecified mix,2026 scenario,n/a,pending,real study must select a provider
+M-003,provider-candidate,Deionized water supply,deionized water,kg,not selected,P-WAT-001,CALC-WATER,,not selected,Example Region,generic,2026 scenario,n/a,pending,real study must select a provider
