@@ -1,0 +1,4 @@
+scenario_id,name,decision_question,parent_scenario,changed_parameters,changed_model_structure,probability_or_status,time_horizon,geography,evidence,authorized_use,status,notes
+S-BASE,Synthetic baseline,Demonstrate parameterized inventory,,PAR-001=52,none,illustrative,2026,Example Region,synthetic,training only,active,
+S-LOW-E,Low electricity intensity,Demonstrate sensitivity parameter,S-BASE,PAR-001=45,none,illustrative,2026,Example Region,synthetic,training only,planned,
+S-HIGH-E,High electricity intensity,Demonstrate sensitivity parameter,S-BASE,PAR-001=65,none,illustrative,2026,Example Region,synthetic,training only,planned,

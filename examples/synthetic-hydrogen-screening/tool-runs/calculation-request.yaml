@@ -1,0 +1,41 @@
+schema_version: "1.0"
+study_id: "synthetic-hydrogen-screening"
+request_id: "CALC-001"
+created: "2026-08-07"
+status: "draft"
+requested_by: ""
+approved_by: ""
+modeling_approach: ""
+functional_unit: ""
+reference_flow: ""
+scenario_ids: []
+tool:
+  name: ""
+  version: ""
+  interface: "gui|api|ipc|python|export-import"
+database:
+  name: ""
+  version: ""
+  system_model: ""
+  license_confirmed: false
+lcia_methods: []
+calculation_types:
+  inventory: true
+  lcia: true
+  contribution: true
+  uncertainty: false
+  sensitivity: false
+  regionalized: false
+  temporal: false
+parameters_snapshot: ""
+model_snapshot_or_hash: ""
+expected_outputs:
+  - "results/processed/impact-results.csv"
+  - "results/processed/contribution-results.csv"
+acceptance_checks:
+  - "reference flow and functional unit reconcile"
+  - "database and method identities are versioned"
+  - "all requested scenarios calculate without unresolved errors"
+  - "elementary-flow coverage and unit checks are documented"
+  - "result signs and orders of magnitude are reviewed"
+notes: ""
