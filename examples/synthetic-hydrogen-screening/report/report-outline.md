@@ -19,3 +19,24 @@ State the decision, functional unit, boundary, leading results, uncertainty/cond
 
 ## 5. Software, databases, system models, LCIA methods, parameters, and scenarios
 
+## 6. Life-cycle inventory results and conservation/completeness checks
+
+## 7. LCIA results by category and scenario
+
+## 8. Contribution, hotspot, sensitivity, scenario, and uncertainty analysis
+
+## 9. Completeness, consistency, benchmark, and model/report checks
+
+## 10. Conclusions, recommendations, limitations, and excluded uses
+
+## 11. Critical review / verification statement and response log
+
+## Appendices
+
+- Study protocol and decision log
+- Process map and model ledger
+- Data, parameter, assumption, and scenario registers
+- LCIA and tool run manifests
+- Detailed results and mapping coverage
+- Review findings and responses
+- Release manifest and file hashes

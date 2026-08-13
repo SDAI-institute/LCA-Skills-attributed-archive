@@ -14,3 +14,20 @@
     "critical": 0,
     "major": 0,
     "minor": 0,
+    "observation": 0
+  },
+  "material_assumptions": [],
+  "unresolved_blockers": [],
+  "claim_restrictions": [],
+  "required_files": [
+    "intake-brief.md",
+    "study-plan.md",
+    "study.yaml",
+    "goal-and-scope.md",
+    "decision-log.md",
+    "work-receipt.json"
+  ],
+  "resume_instruction": "Verify repository, study files, versions and authorizations before continuing. Execute only approved tasks in study-plan.md.",
+  "prepared_by": "",
+  "recipient": ""
+}

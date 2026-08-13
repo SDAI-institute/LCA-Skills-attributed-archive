@@ -17,3 +17,22 @@ Demonstrate the LCA Skills workspace, physical inventory closure, source labelin
 
 ## Boundary and approach
 
+- Attributional cradle-to-gate screening.
+- Included: deionized water production, example electricity supply, and foreground electrolysis.
+- Excluded: electrolyzer manufacture, compression, storage, distribution, use, and end of life. These exclusions are acceptable only for this artifact demonstration.
+- Example Region and illustrative 2026 scenario; all operational numbers marked `SCENARIO` or `CALCULATED`.
+
+## Multifunctionality
+
+Oxygen is physically produced but receives no credit in the baseline because marketability, purity, compression, demand, and displacement are unspecified. A future oxygen-use case must be a separately documented scenario; it may not be added as an automatic avoided-product credit.
+
+## Inventory and quality requirements
+
+- Close water-to-hydrogen-plus-oxygen mass balance within 1%.
+- Use a separate parameter for electricity intensity.
+- Keep all example values synthetic and openly redistributable.
+- Select actual background datasets, database/system model, LCIA method, geography, and uncertainty only in a real study.
+
+## Review and reporting
+
+Internal regression check only. Status cannot advance to `CALCULATED` because no LCIA calculation has been performed.
