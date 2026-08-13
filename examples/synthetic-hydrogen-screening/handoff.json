@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "study_id": "synthetic-hydrogen-screening",
+  "created": "2026-08-07",
+  "study_status": "INVENTORY_READY",
+  "current_gate": "G2",
+  "plan_revision": 1,
+  "last_completed_task_id": null,
+  "next_task_ids": [
+    "T-030"
+  ],
+  "accepted_run_ids": [],
+  "open_findings": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0,

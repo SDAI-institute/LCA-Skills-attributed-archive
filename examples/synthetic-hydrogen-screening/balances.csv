@@ -1,0 +1,4 @@
+balance_id,process_id,metric,flow_or_element,direction,value,unit,basis,scenario,source_id,notes
+B-MASS-001,P-EL-001,mass,water,input,9,kg,per functional unit,baseline,D-001,
+B-MASS-001,P-EL-001,mass,hydrogen,output,1,kg,per functional unit,baseline,D-002,
+B-MASS-001,P-EL-001,mass,oxygen,output,8,kg,per functional unit,baseline,D-003,
