@@ -139,3 +139,7 @@ Retest when any of these changes:
 - openLCA/Brightway/GREET version or database/method/model;
 - workspace security/admin policy;
 - a critical behavioral eval or scientific fixture.
+
+## September 2026 clarification
+
+Structural package validation remains necessary but not sufficient for scientific tool qualification.
