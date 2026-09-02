@@ -388,3 +388,7 @@ python scripts\host_qualification.py --skip-tests
 ### Tool calculation is unavailable
 
 Treat it as unavailable. Record missing packages, endpoint, project, database, activity, method, model, license, or export. Never replace the failed run with invented values.
+
+## September 2026 note
+
+Host-qualification checklists were clarified for ChatGPT, Claude.ai, Claude Code, and Codex install paths after the 0.2.0 source release.
