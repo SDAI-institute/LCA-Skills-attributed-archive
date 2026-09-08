@@ -56,3 +56,7 @@ Recheck this snapshot when any of the following changes:
 - LCIA factors or elementary-flow mapping;
 - regulatory program version;
 - study release after six months or any material model rebuild.
+
+## Post-release follow-up (2026-09-08)
+
+Documentation polish landed without a schema or skill-count change; SOURCE-RELEASE.json remains the byte-integrity baseline for 0.2.0.
