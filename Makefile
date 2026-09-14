@@ -1,4 +1,4 @@
-.PHONY: validate validate-strict links test build source validate-dist qualify compile check release-check new-study example claims hashes clean-dist
+.PHONY: validate validate-strict links test test-pytest build source validate-dist qualify compile check release-check new-study example claims hashes clean-dist
 
 validate:
 	python scripts/validate_repo.py
@@ -11,6 +11,9 @@ links:
 
 test:
 	python -m unittest discover -s tests -p 'test_*.py' -v
+
+test-pytest:
+	python -m pytest
 
 build:
 	python scripts/build_distributions.py --clean
