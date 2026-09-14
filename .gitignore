@@ -13,6 +13,11 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+
+# Local inspiration archives and staging trees (not part of the published plugin)
+no_commit/
+*.zip
+
 lca/studies/*/results/raw/
 lca/studies/*/data/private/
 *.zolca
