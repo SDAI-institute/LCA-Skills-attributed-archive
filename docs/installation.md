@@ -35,6 +35,8 @@ python scripts\validate_distributions.py
 python scripts\host_qualification.py --output host-qualification.json
 ```
 
+If you prefer pytest, `python -m pytest` (or `make test-pytest`) is supported. Collection is scoped to `tests/` and skips local staging trees such as `no_commit/` so duplicate basenames do not poison imports.
+
 Expected source release checks:
 
 - 28 portable skills;
